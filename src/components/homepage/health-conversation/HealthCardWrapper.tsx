@@ -1,8 +1,7 @@
 'use client';
 import React, { useRef, useEffect,useState } from 'react';
 import HealthConversationCards from './health-converssation-cards';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Carousel from './Carousel';
@@ -10,18 +9,18 @@ import { cards } from '@/lib/data';
 
 
 const HealthCardWrapper = () => {
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
-  const [swiperReady, setSwiperReady] = useState(false);
+//   const prevRef = useRef<HTMLButtonElement>(null);
+//   const nextRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    if (prevRef.current && nextRef.current) {
-      setSwiperReady(true);
-    }
-  }, []);
+
+//   useEffect(() => {
+//     if (prevRef.current && nextRef.current) {
+//       setSwiperReady(true);
+//     }
+//   }, []);
 
   return (
-    <div className="py-8 ">
+    <div className="">
     
    <div className="hidden md:grid grid-cols-3 gap-4 w-full">
   {cards.map((card, index) => (

@@ -45,7 +45,7 @@ export default function RealStoriesSection() {
     <span> That Inspire</span>
   </h2>
   
-  <div className="flex overflow-x-auto scrollbar-hide gap-4 scroll-smooth snap-x snap-mandatory">
+  <div className="flex overflow-x-auto scrollbar-hide md:scrollbar-default gap-4 scroll-smooth snap-x snap-mandatory">
     {testimonials.map((t, index) => (
       <RealStoriesCard
         key={index}

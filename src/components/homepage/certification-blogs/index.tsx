@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import blogImage from '../../../assets/images/blogImage.png'; // Replace with real image
 import BlogCards from './blog-cards';
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const certifications = [
   'Dietetic Association of Nigeria (DAN)',
@@ -104,15 +105,15 @@ export default function CertificationsAndBlogs() {
           <div className="flex md:hidden  gap-3 mb-4">
             <button
               onClick={() => scroll('left')}
-              className="w-8 h-8 rounded-full bg-white shadow-md"
+              className="w-8 h-8 rounded-full flex justify-center items-center bg-white shadow-md"
             >
-              {'<'}
+            <MdChevronLeft size={24}  className='text-gray-400' />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="w-8 h-8 rounded-full bg-white shadow-md"
+              className="w-8 h-8 rounded-full flex justify-center items-center bg-white shadow-md"
             >
-              {'>'}
+             <MdChevronRight size={24}  className='text-gray-400'/>
             </button>
           </div>
           <button className="border border-gray-400 px-6 py-2 rounded-md text-sm hover:bg-gray-100 transition">
