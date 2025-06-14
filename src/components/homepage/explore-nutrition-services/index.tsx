@@ -34,7 +34,7 @@ const ExploreNutritionServices = () => {
   <span className="block md:hidden">Explore Our Nutrition Services</span>
 
   {/* Desktop version */}
-  <div className="hidden md:flex md:flex-col md:gap-0">
+  <div className="hidden md:flex font-semibold md:flex-col md:gap-0">
     <span className='mb-6'>Explore Our Nutrition</span>
     <span>Services</span>
   </div>
@@ -50,7 +50,7 @@ const ExploreNutritionServices = () => {
         </div>
         <div>
           
-          <p className="text-sm pl-8 md:pl-10 font-medium text-gray-300">
+          <p className="text-sm pl-8 md:pl-10  text-white">
             Discover your personal path to better nutrition in just minutes—
             your<br className='hidden md:block'/> journey to healthier eating starts with understanding where you are today.
           </p>
@@ -67,7 +67,7 @@ const ExploreNutritionServices = () => {
        
         <div>
          
-          <p className="text-sm pl-8 md:pl-10 font-medium text-gray-300">
+          <p className="text-sm pl-8 md:pl-10  text-white">
             Based on your assessment, our expert dietitians will guide you through
             a<br className='hidden md:block'/> tailored nutrition plan that fits your needs.
           </p>
@@ -82,7 +82,7 @@ const ExploreNutritionServices = () => {
         <h3 className="font-semibold text-md">Begin Your Guided Journey</h3>
         </div>
         <div>
-          <p className="text-sm pl-8 md:pl-10 font-medium text-gray-300">
+          <p className="text-sm pl-8 md:pl-10  text-white">
             With continuous support, progress monitoring, and expert adjustments,<br className='hidden md:block'/>
             you’ll stay on track toward long-term health and sustainable habits.
           </p>

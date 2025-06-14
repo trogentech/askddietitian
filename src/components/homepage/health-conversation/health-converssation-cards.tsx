@@ -10,7 +10,7 @@ type CardProps = {
 
 const HealthConversationCards: React.FC<CardProps> = ({ icon, title, content }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-4 md:pb-8 h-[320px] mr-8  max-w-[370px] pb-10 md:h-[280px]  w-full">
+    <div className="bg-white shadow-lg rounded-lg p-4 md:pb-8 h-[320px] mr-8   pb-10 md:h-[280px]   w-full">
       <div className="flex flex-col justify-center space-x-3 mb-3">
        <div className="bg-purple-100 text-purple-600 p-4 mb-4 flex justify-center items-center h-12 w-12 rounded-full">
   <Image src={icon} alt="health-related-icon" width={56} height={56} />
@@ -18,7 +18,7 @@ const HealthConversationCards: React.FC<CardProps> = ({ icon, title, content }) 
 
         <h3 className="font-semibold text-black">{title}</h3>
       </div>
-      <p className="text-sm text-gray-700">{content}</p>
+      <p className="text-sm text-black">{content}</p>
     </div>
   );
 };

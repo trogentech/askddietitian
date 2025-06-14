@@ -8,7 +8,7 @@ interface RealStoriesCardProps {
   name: string;
 }
 
-const RealStoriesCard: React.FC<RealStoriesCardProps> = ({ image, text, name }) => {
+const RealStoriesCard: React.FC<RealStoriesCardProps> = ({ text, name }) => {
   return (
    <div className=" rounded-xl shadow-md p-3 md:h-[500px] bg-purple-500 flex flex-col items-center min-w-[90%] sm:min-w-[60%] md:min-w-[50%] lg:w-[28%] xl:min-w-[28%]">
 

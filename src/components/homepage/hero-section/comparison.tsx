@@ -9,9 +9,10 @@ const Comparison = () => {
     <section className=" py-6 text-center  md:py-10 ">
       
       <div className="flex items-center px-4 md:px-8 w-full justify-between mb-4 ">
-        <Image src={whiteRice} alt="rice" className="w-16  h-16 md:w-32 md:h-32 rounded-full" />
-        <p className="text-sm text-black md:text-xl font-semibold ">Rice & Couscous</p>
         <Image src={couscous} alt="couscous" className="w-16 h-16 md:w-32 md:h-32 border rounded-full" />
+     
+        <p className="text-sm text-black md:text-xl font-semibold ">Rice & Couscous</p>
+           <Image src={whiteRice} alt="rice" className="w-16  h-16 md:w-32 md:h-32 rounded-full" />
       </div>
 
       <div className="flex w-full justify-between text-sm md:px-8">

@@ -43,7 +43,7 @@ export default function Carousel({
     <button
       onClick={prev}
       disabled={curr === 0}
-      className={`p-1 rounded-full shadow bg-white text-gray-800 transition-opacity ${
+      className={`p-1 w-8 h-8 rounded-full mr-4  shadow-md bg-white text-gray-800 transition-opacity ${
         curr === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-white"
       }`}
     >
@@ -53,7 +53,7 @@ export default function Carousel({
     <button
       onClick={next}
       disabled={curr === cards.length - 1}
-      className={`p-1 rounded-full shadow bg-white text-gray-800 transition-opacity ${
+      className={`p-1 w-8 h-8 rounded-full mr-4  shadow-md bg-white text-gray-800 transition-opacity ${
         curr === cards.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-white"
       }`}
     >

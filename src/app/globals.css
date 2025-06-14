@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #8B2CC9;
+  --purple:#F3EAFA;
   --blue:#2C99C9;
   --light-purple:#F3EAFA;
    --light-gray:#EAF5F4;
@@ -18,6 +19,7 @@
   --color-primary:var(--primary);
    --color-blue:var(--blue);
    --color-light-purple:var(--light-purple);
+   --color-purple:var(--purple);
    --color-light-gray:var(--light-gray);
 }
 

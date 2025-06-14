@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import logo  from '../../../assets/images/Logo.png'
-import assets from '@/assets/assets';
+// import assets from '@/assets/assets';
 import instagramLogo from '../../../assets/images/instagram.png';
 import facebookLogo from '../../../assets/images/facebook.png';
 import twitterLogo from '../../../assets/images/twitter.png';
@@ -44,16 +44,16 @@ const Header = () => {
       <nav className="hidden md:flex md:w-3/4  text-lg md:ml-auto">
         <div className='flex items-center  md:w-1/2 justify-between'>
          <div>
-                <Link href="/home" className='text-black text-[14px]'>Home</Link>
+                <Link href="/" className='text-black text-[14px] font-semibold'>Home</Link>
             </div>
             <div>
-                <Link href="/about" className='text-black text-[14px]'>About Us</Link>
+                <Link href="/about" className='text-black text-[14px] font-semibold'>About Us</Link>
             </div>
         <div>
-            <Link href="/services" className='text-black text-[14px]'>Services</Link>
+            <Link href="/services" className='text-black text-[14px] font-semibold'>Services</Link>
         </div>
         <div>
-                <Link href="/blog" className='text-black text-[14px]'>Blog</Link>
+                <Link href="/blog" className='text-black text-[14px] font-semibold'>Blog</Link>
         </div>
        
         </div>

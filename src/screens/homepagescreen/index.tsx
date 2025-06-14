@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <div className=''>
       <section className='md:px-12 px-6'>
-          <Navigation/>
+          {/* <Navigation/> */}
         <Hero/>
       </section>
       <section className='md:px-12 px-6'>
@@ -22,7 +22,7 @@ const HomePage = () => {
         <section className='md:px-12 px-6'>
             <HealthConversation/>
         </section>
-       <section className='md:mt-10'>
+       <section className='md:mt-10 mt-10'>
          <ExploreNutritionServices/>
        </section>
        <section className='mt-10 md:mt-5'>
@@ -31,12 +31,12 @@ const HomePage = () => {
        <section>
             <CertificationsAndBlogs/>
        </section>
-       <section className='mt-10'>
+       {/* <section className='mt-10'>
         <NutritionPage/>
        </section>
        <section className='bg-light-gray'>
         <Footer/>
-       </section>
+       </section> */}
     </div>
   )
 }

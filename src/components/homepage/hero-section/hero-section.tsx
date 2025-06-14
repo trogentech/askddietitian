@@ -1,11 +1,11 @@
 'use client'
 import BookButton from '@/components/button/bookbutton';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function Hero() {
   return (
     <section className="py-4 md:py-12 w-full bg-white ">
-      <h1 className="text-xl md:text-[40px] text-black font-semibold leading-7 md:py-6 md:leading-tight">
+      <h1 className="text-xl  md:text-[36px] text-black font-semibold leading-7 md:py-3 md:leading-loose">
         <span>Your Condition Is Unique.</span>
         <br />
         <span className="hidden md:inline-block">
@@ -20,11 +20,11 @@ export default function Hero() {
         Honest expertise. Personalized <br />
         approach. Better health outcomes.
       </p>
-      <p className="hidden md:block text-black mt-4">
+      <p className="hidden md:block text-black ">
         Honest expertise. Personalized approach. Better health outcomes.
       </p>
 
-      <div className="mt-6 flex  sm:flex-row items-start  gap-4 md:gap-8">
+      <div className="mt-6 flex  sm:flex-row items-start  gap-2 md:gap-8">
         <BookButton text="Get a Free Health Assessment" />
 
         <div className="flex items-center text-sm text-black ">
