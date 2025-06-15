@@ -22,11 +22,11 @@ const BlogCards: React.FC<BlogCardProps> = ({ image, title, description, date, r
 
         <div className="flex text-xs text-gray-500 gap-6 items-center mb-4">
           <div className="flex items-center gap-1">
-            <FaRegCalendarAlt />
+            <FaRegCalendarAlt className='text-black'/>
             {date}
           </div>
           <div className="flex items-center gap-1">
-            <FiClock />
+            <FiClock className='text-black'/>
             {readTime}
           </div>
         </div>
