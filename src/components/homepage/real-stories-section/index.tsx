@@ -1,35 +1,38 @@
 import RealStoriesCard from "./real-stories-cards";
-
+import pregnantwoman from "../../../assets/images/black-pregnant-women-posing (2).jpg"
+import portraitman from  "../../../assets/images/portrait-african-american-man.jpg"
+import caringwoman from  "../../../assets/images/full-shot-mother-taking-care-babies.jpg"
+import feedingwoman from "../../../assets/images/woman-cooking-home-front-view.jpg"
 export default function RealStoriesSection() {
   const testimonials = [
     {
       name: "Ozy",
-      image: "/images/ozys-avatar.jpg", // Replace with actual image path
+      image: feedingwoman,
       text: "After being diagnosed with high cholesterol, fatty liver, high blood pressure, and high blood sugar, Askdietitian created a meal plan with familiar, accessible foods. Following it, my blood sugar and BP normalized, fatty liver disappeared, and I lost 8kg. My mom experienced similar success—all her health issues are now in the past!",
     },
     {
       name: "Kehinde",
-      image: "/images/kehinde-avatar.jpg",
+      image: caringwoman,
       text: "With PCOS, I needed specialized help. Askdietitian provided a relatable meal plan and regularly called to encourage me. My mood improved dramatically, and I lost 8lbs. They're genuinely the best nutritional service I’ve encountered.",
     },
     {
       name: "Mark",
-      image: "/images/mark-avatar.jpg",
+      image: pregnantwoman,
       text: "I sought help for my mother's dietary needs and couldn’t be more grateful. The practical, easy-to-follow meal plan showed results within weeks. Their regular check-ins demonstrated genuine care for my mother's well-being. A truly knowledgeable and compassionate health consultant.",
     },
       {
       name: "Ozy",
-      image: "/images/ozys-avatar.jpg", // Replace with actual image path
+      image: portraitman,
       text: "After being diagnosed with high cholesterol, fatty liver, high blood pressure, and high blood sugar, Askdietitian created a meal plan with familiar, accessible foods. Following it, my blood sugar and BP normalized, fatty liver disappeared, and I lost 8kg. My mom experienced similar success—all her health issues are now in the past!",
     },
     {
       name: "Kehinde",
-      image: "/images/kehinde-avatar.jpg",
+      image: caringwoman,
       text: "With PCOS, I needed specialized help. Askdietitian provided a relatable meal plan and regularly called to encourage me. My mood improved dramatically, and I lost 8lbs. They're genuinely the best nutritional service I’ve encountered.",
     },
     {
       name: "Mark",
-      image: "/images/mark-avatar.jpg",
+      image: pregnantwoman,
       text: "I sought help for my mother's dietary needs and couldn’t be more grateful. The practical, easy-to-follow meal plan showed results within weeks. Their regular check-ins demonstrated genuine care for my mother's well-being. A truly knowledgeable and compassionate health consultant.",
     },
   ];

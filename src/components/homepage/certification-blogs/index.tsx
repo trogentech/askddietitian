@@ -4,6 +4,7 @@ import Image from 'next/image';
 import blogImage from '../../../assets/images/blogImage.png'; // Replace with real image
 import BlogCards from './blog-cards';
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import Link from 'next/link';
 
 const certifications = [
   'Dietetic Association of Nigeria (DAN)',
@@ -116,9 +117,11 @@ export default function CertificationsAndBlogs() {
              <MdChevronRight size={24}  className='text-gray-400'/>
             </button>
           </div>
-          <button className="border border-gray-400 px-6 py-2 rounded-md text-sm hover:bg-gray-100 transition">
-            Read Blog
-          </button>
+         <Link href="/blog/1">
+  <button className="border border-gray-400 px-6 py-2 rounded-md text-sm hover:bg-gray-100 transition">
+    Read More
+  </button>
+</Link>
         </div>
       </div>
     </section>

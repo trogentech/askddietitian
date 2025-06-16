@@ -8,7 +8,7 @@ type BookButtonProps = {
 const BookButton: React.FC<BookButtonProps> = ({ text }) => {
   return (
     <div className=' '>
-      <Link href="/#consultation" className="bg-[#8B2CC9]  border  border-black w-full text-white py-[12px]  md:p-[12px]  text-[10px] px-2  md:px-9 md:py-3 shadow-lg rounded-md  ">
+      <Link href="/#consultation" className="bg-[#8B2CC9]  w-full text-white py-[12px]  md:p-[12px]  text-[10px] px-2  md:px-9 md:py-3 shadow-lg rounded-md  ">
         {text}
       </Link>
     </div>
