@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import { StaticImageData } from 'next/image';
+import Link from 'next/link';
 interface BlogCardProps {
   image: string | StaticImageData;
   title: string;
@@ -30,10 +31,12 @@ const BlogCards: React.FC<BlogCardProps> = ({ image, title, description, date, r
             {readTime}
           </div>
         </div>
-
-        <button className="bg-primary text-white text-[10px] px-6 py-2 rounded hover:bg-purple-600 transition">
+         <Link href={"/blog/1"}>
+          <button className="bg-primary text-white text-[10px] px-6 py-2 rounded hover:bg-purple-600 transition">
           Read More
         </button>
+         </Link>
+       
       </div>
     </div>
   );
