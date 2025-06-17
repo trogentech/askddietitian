@@ -6,18 +6,19 @@ import { MdOutlineCalendarMonth } from "react-icons/md";
 import { LuClock } from "react-icons/lu";
 import { SlBookOpen } from "react-icons/sl";
 import Link from 'next/link';
+import bgImage from "../../assets/images/fruit-salad.jpg"
 export default function BlogDetail() {
   return (
     <div className="bg-white text-gray-800">
       {/* Cover Section */}
       <div className="relative h-76 ronded-lg md:h-80 w-full overflow-hidden">
         <Image
-          src="/images/blog-cover.jpg" 
+          src={bgImage} 
           alt="Managing Diabetes"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
+        <div className="absolute inset-0  bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
           <h1 className="text-xl md:text-4xl font-semibold leading-loose">Managing Diabetes Through <br/> Strategic Meal Planning</h1>
           <div className="mt-3 flex gap-4 text-xs md:text-sm flex-wrap justify-center">
             <span className='flex items-center  gap-2'><MdOutlineCalendarMonth /> 1/10/2024</span>
