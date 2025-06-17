@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import ecploreOurNutAndWellness from "../../assets/images/onion.png"
+import ecploreOurNutAndWellness from "../../assets/images/fruit-salad.jpg"
 import SearchBar from './searchbar'
 const Banner = () => {
   return (
