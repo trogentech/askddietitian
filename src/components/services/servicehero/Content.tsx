@@ -5,7 +5,7 @@ import BookButton from '@/components/button/bookbutton';
 export default function Content() {
   return (
     <section className="py-4 md:py-2 w-full bg-white ">
-      <h1 className="text-xl  md:text-4xl text-black font-semibold leading-7  md:leading-loose">
+      <h1 className="text-xl  md:text-4xl text-black font-semibold leading-7  md:leading-[1.5]">
         <span  className='block md:hidden' >Personalized Nutrition</span>
         
         <span className='hidden md:block' >Personalized Nutrition For</span>
@@ -17,7 +17,7 @@ export default function Content() {
         </span>
       </h1>
 
-      <p className="text-black text-[13px] mt-4 md:hidden">
+      <p className="text-black text-[14px] mt-4 md:hidden">
          Medical Nutrition Therapy (MNT) uses tailored nutrition plans to  manage and prevent chronic conditions. Our expert dietitians assess your health, lifestyle, and history to create personalized, long-term solutions.
       </p>
       <p className="hidden md:block text-black mt-4">

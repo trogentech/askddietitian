@@ -16,10 +16,10 @@ const HomePage = () => {
           {/* <Navigation/> */}
         <Hero/>
       </section>
-      <section className='md:px-12 px-6'>
+      <section className='md:px-12 mt-14 px-6'>
           <Testimonial/>
       </section>
-        <section className='md:px-12 px-6'>
+        <section className='md:px-12 px-6 md:pt-4 mt-20  md:mt-10'>
             <HealthConversation/>
         </section>
        <section className='md:mt-10 mt-10'>
@@ -28,7 +28,7 @@ const HomePage = () => {
        <section className='mt-10 md:mt-5'>
         <RealStoriesSection/>
        </section>
-       <section>
+       <section className=''>
             <CertificationsAndBlogs/>
        </section>
        {/* <section className='mt-10'>

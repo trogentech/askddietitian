@@ -19,10 +19,12 @@ const RealStoriesCard: React.FC<RealStoriesCardProps> = ({ image, text, name }) 
 
       <div className="absolute bottom-0">
         <div className="relative shadow-2xl m-4 bg-white rounded-md p-4 min-h-[250px] md:min-h-[280px]">
-          <Image src={quotationMark} alt="quote" className="w-8 h-8 mb-2" />
-          <blockquote className="text-gray-700 text-start text-xs md:text-[13px]">
+          <div>
+            <Image src={quotationMark} alt="quote" className="w-6 h-6 md:w-10 md:h-8  mb-2 object-contain" />
+          </div>
+          <p className="text-black text-start text-xs ">
             {text}
-          </blockquote>
+          </p>
 
           <div className="absolute bottom-4 md:bottom-10 flex items-center w-full space-x-3 justify-start">
             <Image src={profileImage} alt={name} className="w-8 h-8 rounded-full object-cover" />

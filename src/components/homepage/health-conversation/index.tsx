@@ -4,7 +4,7 @@ import HealthCardWrapper from './HealthCardWrapper'
 
 const HealthConversation = () => {
   return (
-    <div className='mt-6 pb-6'>
+    <div className='mt-6 md:pb-10'>
         <ConversationHeader/>
         <HealthCardWrapper/>
     </div>

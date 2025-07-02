@@ -1,8 +1,8 @@
 export default function NutritionPage() {
   return (
-    <div className="bg-gradient-to-b from-primary to-purple-500 text-white min-h-[400px]">
-      <div className="text-center py-16 px-4">
-        <h1 className="text-xl md:text-4xl  leading-tight">
+    <div className="bg-gradient-to-b from-primary to-purple-500 flex justify-center items-center text-white  min-h-[400px]">
+      <div className="text-center py-16  px-4">
+        <h1 className="text-xl md:text-4xl  leading-[1.5]">
           Transform Your Plate,<br className="md:hidden block"/> Transform Your Life,
           <br className="hidden md:inline"/>
           Get Your  <br className="md:hidden block" />Custom Nutrition Care Today

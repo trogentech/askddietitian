@@ -6,12 +6,65 @@ import { MdOutlineCalendarMonth } from "react-icons/md";
 import { LuClock } from "react-icons/lu";
 import { SlBookOpen } from "react-icons/sl";
 import Link from 'next/link';
-import bgImage from "../../assets/images/fruit-salad.jpg"
+import bgImage from "../../assets/images/blogdetail.png"
+import bgImagemobile from "../../assets/images/blogmobile.png"
 export default function BlogDetail() {
   return (
     <div className="bg-white text-gray-800">
+
+
+          <div className="relative hidden md:block h-96 overflow-hidden rounded-lg shadow-sm  md:h-[300px] ">
+      
+                 
+        <Image
+          alt=""
+           src={bgImage}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      
+        <div className="relative top-0 bg-gradient-to-t from-gray-900/50 to-gray-900/25 py-10 h-full flex flex-col justify-center items-center text-white px-4 text-center">
+          <div className="absolute inset-0  bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
+          <h1 className="text-xl md:text-4xl font-semibold leading-[1.5]">Managing Diabetes Through <br/> Strategic Meal Planning</h1>
+          <div className="mt-3 flex gap-4 text-xs md:text-sm flex-wrap justify-center">
+            <span className='flex items-center  gap-2'><MdOutlineCalendarMonth /> 1/10/2024</span>
+            <span className='flex items-center  gap-2'><LuClock/> 8 min read</span>
+            <span className='flex items-center  gap-2'><SlBookOpen/> Adeola O. Adekeye (RDN, MS-PH)</span>
+          </div>
+        </div>
+             
+            {/* <div className=" inset-0  bg-opacity-40 ">
+               
+              </div> */}
+        </div>
+      </div>
+
+      
+          <div className="relative block md:hidden h-96 overflow-hidden rounded-lg shadow-sm  md:h-[300px] ">
+      
+                 
+        <Image
+          alt=""
+           src={bgImagemobile}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      
+        <div className="relative top-0 bg-gradient-to-t from-gray-900/50 to-gray-900/25 py-10 h-full flex flex-col justify-center items-center text-white px-4 text-center">
+          <div className="absolute inset-0  bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
+          <h1 className="text-xl md:text-4xl font-semibold leading-[1.5]">Managing Diabetes Through <br/> Strategic Meal Planning</h1>
+          <div className="mt-3 flex gap-4 text-xs md:text-sm flex-wrap justify-center">
+            <span className='flex items-center  gap-2'><MdOutlineCalendarMonth /> 1/10/2024</span>
+            <span className='flex items-center  gap-2'><LuClock/> 8 min read</span>
+            <span className='flex items-center  gap-2'><SlBookOpen/> Adeola O. Adekeye (RDN, MS-PH)</span>
+          </div>
+        </div>
+             
+            {/* <div className=" inset-0  bg-opacity-40 ">
+               
+              </div> */}
+        </div>
+      </div>
       {/* Cover Section */}
-      <div className="relative h-76 ronded-lg md:h-80 w-full overflow-hidden">
+      {/* <div className="relative h-76 ronded-lg md:h-80 w-full overflow-hidden">
         <Image
           src={bgImage} 
           alt="Managing Diabetes"
@@ -26,7 +79,7 @@ export default function BlogDetail() {
             <span className='flex items-center  gap-2'><SlBookOpen/> Adeola O. Adekeye (RDN, MS-PH)</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Content Section */}
       <div className=" mx-auto py-6  lg:px-0">
@@ -49,7 +102,7 @@ export default function BlogDetail() {
             <h3 className="text-lg font-semibold">What Are Macronutrients?</h3>
             <p className='text-sm'>Macronutrients are the nutrients your body needs in large amounts to function properly. They provide energy and support various bodily functions:</p>
 
-            <h4 className="font-medium mt-4">1. Carbohydrates</h4>
+            <h4 className="font-semibold mt-4">1. Carbohydrates</h4>
             <p className='text-sm'>Often misunderstood, carbohydrates are your body's preferred energy source. They should make up 45-65% of your daily calories. Focus on complex carbohydrates like:</p>
             <ul className="text-sm list-disc list-inside ">
               <li>Whole grains (brown rice, quinoa, oats)</li>
@@ -57,7 +110,7 @@ export default function BlogDetail() {
               <li>Vegetables and fruits</li>
             </ul>
 
-            <h4 className="font-medium mt-4">2. Proteins</h4>
+            <h4 className="font-semibold mt-4">2. Proteins</h4>
             <p className='text-sm'>Proteins are the building blocks of your body, essential for muscle repair, immune function, and hormone production. Aim for 10-35% of your daily calories from protein sources such as:</p>
             <ul className="text-sm list-disc list-inside">
               <li>Lean meats, fish, and poultry</li>
@@ -65,7 +118,7 @@ export default function BlogDetail() {
               <li>Dairy products and eggs</li>
             </ul>
 
-            <h4 className="font-medium mt-4">3. Fats</h4>
+            <h4 className="font-semibold mt-4">3. Fats</h4>
             <p className='text-sm'>Healthy fats are crucial for brain function, hormone production, and nutrient absorption. They should comprise 20-35% of your daily intake. Focus on:</p>
             <ul className="text-sm list-disc list-inside">
               <li>Monounsaturated fats (olive oil, avocados)</li>
@@ -78,14 +131,14 @@ export default function BlogDetail() {
             <h3 className="text-lg font-semibold">Understanding Micronutrients</h3>
             <p className='text-sm'>Micronutrients are vitamins and minerals needed in smaller amounts but are equally important for optimal health:</p>
 
-            <h4 className="font-medium mt-4">Essential Vitamins</h4>
+            <h4 className="font-semibold mt-4">Essential Vitamins</h4>
                         <p className='text-sm'>Water-soluble vitamins (B-complex, vitamin C) need regular replenishment, while fat-soluble vitamins (A, D, E, K) are stored in body fat.</p>
 
-            <h4 className="font-medium mt-4">Critical Minerals</h4>
+            <h4 className="font-semibold mt-4">Critical Minerals</h4>
      
 <p>Iron, calcium, zinc, and magnesium play vital roles in everything from bone health to immune function.</p>
 
-            <h4 className="font-medium mt-4">Practical Application</h4>
+            <h4 className="font-semibold mt-4">Practical Application</h4>
             <p className='text-sm'>Understanding these nutrients is just the beginning. The key is creating balanced meals that incorporate all these elements while fitting into your lifestyle and cultural preferences.</p>
             <p className='text-sm'>Remember, nutrition isn't about perfection—it's about making informed choices that support your health goals while being sustainable for your unique circumstances.</p>
           </section>

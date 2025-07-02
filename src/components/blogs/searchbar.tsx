@@ -7,10 +7,10 @@ export default function SearchBar() {
         <input
           type="text"
           placeholder="Search for a nutritional topic..."
-          className="flex-grow px-4 text-black placeholder-black py-2 focus:outline-none"
+          className="flex-grow placeholder:text-xs md:placeholder:text-base px-4 text-black placeholder-black py-2 focus:outline-none"
         />
-        <button className="bg-primary text-white px-4">
-         <FiSearch />
+        <button className="bg-primary hover:cursor-pointer rounded-lg text-white px-4">
+         <FiSearch size={20}/>
         </button>
       </div>
     </div>

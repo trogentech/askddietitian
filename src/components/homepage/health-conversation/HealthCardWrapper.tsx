@@ -20,7 +20,7 @@ const HealthCardWrapper = () => {
 //   }, []);
 
   return (
-    <div className="">
+    <div className="md:mb-20">
     
    <div className="hidden md:grid grid-cols-3 gap-4 w-full">
   {cards.map((card, index) => (
@@ -30,7 +30,7 @@ const HealthCardWrapper = () => {
 
 
       {/* Mobile swiper with arrows */}
-      <div className="md:hidden overflow-x-hidden flex flex-col justify-center items-center w-full">
+      <div className="md:hidden overflow-x-hidden mb-20 flex flex-col justify-center items-center w-full">
         <Carousel>
             {
                 cards.map((s)=>(<HealthConversationCards {...s}/>))

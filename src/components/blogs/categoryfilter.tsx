@@ -2,7 +2,7 @@ const categories = ["All", "PCOS", "Pediatric Nutrition", "Diabetes Care", "Hear
 
 export default function CategoryFilter() {
   return (
-    <div className="flex flex-wrap gap-2 mt-4 md:mt-8">
+    <div className="flex flex-wrap gap-4 mt-4 md:my-8">
       {categories.map((cat, idx) => (
         <button
           key={idx}

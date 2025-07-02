@@ -4,8 +4,8 @@ import BookButton from '@/components/button/bookbutton';
 
 export default function ProfileHero() {
   return (
-    <section className="py-4 md:py-6 w-full bg-white ">
-      <h1 className="text-xl  md:text-[40px] text-black font-semibold leading-7  md:leading-loose">
+    <section className="py-4 md:py-6 flex flex-col gap-6 w-full bg-white ">
+      <h1 className="text-xl  md:text-[40px] text-black font-semibold leading-7  md:leading-[1.5]">
         <span>Meet the Founder - Adeola</span>
         <br />
         <span className="hidden md:inline-block">
@@ -16,10 +16,10 @@ export default function ProfileHero() {
         </span>
       </h1>
 
-      <p className="text-black mt-4 md:hidden text-sm leading-tight md:leading-loose">
+      <p className="text-black mt-4 md:hidden text-[16px] leading-tight md:leading-loose">
         Adeola is a distinguished Registered Dietitian Nutritionist (RDN) with dual registration in  Nigeria and the UK, bringing exceptional clinical nutrition expertise to every patient  interaction.
       </p>
-      <p className="hidden md:block text-black mt-4 leading-tight md:leading-loose">
+      <p className="hidden md:block   text-black  text-[16px]  leading-tight md:leading-[1.5]">
         Adeola is a distinguished Registered Dietitian Nutritionist (RDN) <br/> with dual registration in  Nigeria and the UK, bringing exceptional <br/>clinical nutrition expertise to every patient  interaction.
       </p>
 

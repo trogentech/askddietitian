@@ -1,11 +1,48 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import logo  from '../../../assets/images/Logo.png'
 import Image from 'next/image';
 import instagramLogo from '../../../assets/images/instagram.png';
 import facebookLogo from '../../../assets/images/facebook.png';
 import twitterLogo from '../../../assets/images/twitter.png';
 import linkedinLogo from '../../../assets/images/linkedin.png';
+import { sendNewsletterEmail } from '@/lib/sendEmail';
+import { EmailJSResponseStatus } from '@emailjs/browser';
 const Footer = () => {
+  const [error,setError] = useState("")
+      const [success,setSuccess] = useState("")
+      const [email,setEmail] = useState("")
+    
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = e.target;
+      console.log("value",value)
+        setEmail(e.target.value)
+          console.log("value-------",value)
+    };
+    const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+    
+      if (!email) {
+        setError("Email is required");
+        return;
+      }
+    
+      try {
+        await sendNewsletterEmail(email)
+       
+        setSuccess("Thanks for subscribing!");
+        setError("");
+        setEmail("");
+      } catch (err) {
+        if (err instanceof EmailJSResponseStatus) {
+         
+          setError("Failed to send. Please try again.");
+          return;
+        }
+     
+        setError("Something went wrong.");
+      }
+    };
   return (
     <>
       <div className="pb-10 text-black px-4 md:px-20 py-12 grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -57,17 +94,24 @@ const Footer = () => {
           <p className="text-[10px] mb-4">
             Stay up to date by reading our high quality article and personalized for you
           </p>
-          <div className="flex items-center border-b border-black py-2">
+          <form onSubmit={sendEmail} className="flex items-center border-b border-black py-2">
             <input
               className="appearance-none bg-transparent text-sm border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
               type="text"
+              id='email'
+              name='email'
+              value={email}
+              onChange={handleChange}
               placeholder="Write your email here"
               aria-label="Email"
             />
-            <button className="flex-shrink-0 bg-primary  h-9 w-9 text-white p-1 rounded-full">
+            <button type='submit' className="flex-shrink-0 bg-primary  h-9 w-9 text-white p-1 rounded-full">
               ➜
             </button>
-          </div>
+             
+          </form>
+           {success && <p className="text-green-600 mt-2">{success}</p>}
+              {error && <p className="text-red-600 mt-2">{error}</p>}
         </div>
       </div>
         <div className='hidden md:block md:px-20 w-full'>

@@ -15,22 +15,19 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative z-50">
+    <header className="relative z-50 w-full">
       {/* Top Bar */}
-      <div className="flex items-center p-2 h-[80px] bg-white shadow-md rounded-xl">
-        <div className="flex items-center">
+      <div  className="flex items-center  justify-between p-2 h-[80px] border  border-gray-200 bg-white shadow-md rounded-xl">
+        <div className="flex items-center gap-10  px-4">
           <Image src={logo} alt="web logo" width={100} height={45} />
-          <div className="hidden md:w-[250px] md:flex md:items-center md:px-10 md:gap-4">
+          <div className="hidden  md:flex md:items-center  md:gap-4">
             <Image src={instagramLogo} alt="instagram-logo" width={15} height={15} />
             <Image src={linkedinLogo} alt="linkedin-logo" width={15} height={15} />
             <Image src={twitterLogo} alt="twitter-logo" width={15} height={15} />
-           <div>
-         <Image src={facebookLogo} alt='facebook-logo' width={7} height={100} />
-    
-       </div>
-          </div>
+            <Image src={facebookLogo} alt='facebook-logo' width={7} height={100} />
+        
         </div>
-
+ </div>
         {/* Mobile Menu Button */}
         <nav className="md:hidden ml-auto">
           <button onClick={() => setIsOpen(true)}>
@@ -39,19 +36,20 @@ const Header = () => {
         </nav>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex md:w-3/4 text-lg md:ml-auto">
-          <div className="flex items-center md:w-1/2 justify-between">
+        <nav className="hidden md:flex mx-auto    text-lg md">
+          <div className="flex items-center   gap-10  justify-between">
             <Link href="/" className="text-black text-[14px] font-semibold">Home</Link>
             <Link href="/about" className="text-black text-[14px] font-semibold">About Us</Link>
             <Link href="/services" className="text-black text-[14px] font-semibold">Services</Link>
             <Link href="/blog" className="text-black text-[14px] font-semibold">Blog</Link>
           </div>
-          <div className="ml-auto">
+        </nav>
+          <div className="hidden md:block">
             <BookButton text=" Book a Free Consultation" />
           </div>
-        </nav>
       </div>
-
+  
+       
       {/* Mobile Slide Menu */}
       {isOpen && (
         <div className="fixed inset-0 z-40 w-full  bg-opacity-50">
@@ -65,12 +63,12 @@ const Header = () => {
                 </button>
               </div>
 
-              <button className="w-full bg-purple-600 text-white py-2 rounded-md font-medium mb-6">
+              <button className="w-3/4 bg-purple-600 text-white py-2 rounded-md font-medium mb-6">
                 Book a Free Consultation
               </button>
 
               {/* Navigation */}
-              <nav className="flex flex-col space-y-4 text-lg text-gray-900">
+              <nav className="flex flex-col space-y-4 text-base text-gray-900">
                 <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
                 <Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link>
                 <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>
@@ -88,6 +86,7 @@ const Header = () => {
           </div>
         </div>
       )}
+       
     </header>
   );
 };

@@ -43,12 +43,12 @@ export default function RealStoriesSection() {
    <span> Real Stories, Real Results:</span> <br/>
     <span>Nutrition Journeys That Inspire</span>
   </h2>
-  <h2 className=" hidden md:block text-xl text-center leading-tight md:text-4xl font-semibold mb-8">
+  <h2 className=" hidden md:block text-xl text-center leading-tight md:text-4xl font-semibold mb-13">
    <span> Real Stories, Real Results: Nutrition Journeys</span> <br/>
     <span> That Inspire</span>
   </h2>
   
-  <div className="flex overflow-x-auto scrollbar-hide md:scrollbar-default gap-4 scroll-smooth snap-x snap-mandatory">
+  <div className="flex overflow-x-auto  md:scrollbar-default  md:overflow-x-scroll gap-4 scroll-smooth snap-x snap-mandatory">
     {testimonials.map((t, index) => (
       <RealStoriesCard
         key={index}

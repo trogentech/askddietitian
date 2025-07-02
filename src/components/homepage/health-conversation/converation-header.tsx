@@ -2,8 +2,8 @@ import React from 'react'
 
 const ConversationHeader = () => {
   return (
-    <div className='w-full pb-4'>
-        <p className='text-black md:w-3/4  text-lg md:text-2xl font-semibold md:leading-loose'>
+    <div className='w-full pb-10'>
+        <p className='text-black md:w-3/4  text-lg md:text-2xl font-bold '>
            <span className='leading-7' >Science-backed nutrition meets heartfelt support</span><br className='hidden md:inline'/> 
             <span className='leading-7'>
                 at askddietitian—where your health journey</span><br className=''/> 

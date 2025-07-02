@@ -55,29 +55,52 @@ export default function CertificationsAndBlogs() {
   };
 
   return (
-    <section className="bg-white py-5">
+    <section className="pt-5 ">
       {/* Certifications Section */}
-      <div className="px-4 md:px-20 text-center py-10 mb-12">
-        <h2 className="hidden md:block text-2xl text-center md:text-3xl font-bold mb-8">
+      <div className="px-4 md:px-20 text-center pt-10 mb-12">
+        <h2 className="hidden md:block  text-2xl text-center md:text-3xl font-bold mb-12">
           Our Nutrition Solutions Are Certified and Accredited
         </h2>
         <h2 className="md:hidden text-2xl text-start md:text-3xl font-bold mb-6">
           Our Nutrition Solutions Are Certified and Accredited
         </h2>
         <div className="flex flex-wrap gap-x-8 md:gap-x-4 gap-y-2 text-black font-medium text-sm md:text-[14px]">
-          {certifications.map((cert, idx) => (
-            <div key={idx} className="flex flex-col md:flex-row">
-              <span className="text-start font-medium md:border-none leading-tight md:pl-0 md:px-4">
-                {cert}
-              </span>
+          <div  className="flex flex-col md:w-[250px] md:flex-row md:justify-center  md:mr-4">
+              <span className="text-start w-full md:text-md      font-semibold md:border-none leading-tight md:pl-0 ">
+               Dietetic Association of <br className='hidden md:block'/> Nigeria (DAN)
+               </span>
               <span
-                className={`border-b-2 md:border-r-4 md:border-b-0 border-blue w-8 h-2 md:h-8 ${
-                  idx === certifications.length - 1 && `border-none`
-                }`}
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8 "
               ></span>
             </div>
-          ))}
-        </div>
+      
+         
+            <div  className="flex flex-col md:w-[250px] md:flex-row md:justify-center md:mr-4">
+              <span className="text-start w-full  md:text-md      font-semibold md:border-none leading-tight md:pl-0 ">
+              British Dietetic <br className='hidden md:block'/> Association (BDA)
+               </span>
+              <span
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8 "
+              ></span>
+            </div>
+      
+         
+            <div  className="flex flex-col md:w-[250px] md:flex-row md:justify-center md:mr-4">
+              <span className="text-start w-full  md:text-md    font-semibold md:border-none leading-tight md:pl-0 ">
+             The Health and Care Professions Council (HCPC)
+               </span>
+              <span
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8 "
+              ></span>
+            </div>
+      
+        <div  className="flex flex-col md:w-[250px]  md:text-md  md:flex-row md:justify-center">
+              <span className="text-start w-full   font-semibold md:border-none leading-tight md:pl-0 ">
+            FIDES (WHO)
+               </span>
+             
+            </div>
+            </div>
       </div>
 
       {/* Blog Section */}
@@ -102,7 +125,7 @@ export default function CertificationsAndBlogs() {
         </div>
 
         {/* Navigation buttons */}
-        <div className="flex flex-col items-center mt-8">
+        <div className="flex flex-col  items-center mt-8">
           <div className="flex md:hidden  gap-3 mb-4">
             <button
               onClick={() => scroll('left')}
