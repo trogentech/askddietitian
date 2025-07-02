@@ -23,25 +23,25 @@ const Profile = () => {
           </div>
         </div>
        <div className='h-3/5 py-12 md:w-1/2 '>
-         <div className=" md:h-[450px]">
-          <Image src={profileImage} alt="Adeola" className="rounded-md w-full h-full object-contain" />
+         <div className="">
+          <Image src={profileImage} alt="Adeola" className="rounded-md w-full  object-cover" />
         </div>
        </div>
 
-        <div className="flex-1 py-12 space-y-4 hidden md:block">
-          <h3 className="text-xl md:text-4xl font-semibold leading-loose">Pioneering Personalized Nutrition</h3>
-          <p className="text-sm font-medium md:text-[13px] leading-loose">
+        <div className="flex-1 py-12 space-y-8 hidden md:block">
+          <h1 className="text-xl md:text-4xl font-semibold leading-[1.5]">Pioneering Personalized Nutrition</h1>
+          <p className="text-sm font-normal md:text-[16px] leading-[1.5]">
             Adeola remains at the cutting edge of nutritional science, currently pursuing a qualification in Nutrigenetics and Nutrigenomics at the University of Cardiff. This advanced study allows her to create truly personalized nutrition plans based on patients' genetic profiles—a revolutionary approach to dietary intervention
           </p>
-<h3 className="text-md font-medium leading-tight">Her Academic Credentials Showcase Her <br/> Commitment to Excellence</h3>
-          <div className="space-y-2 text-sm md:text-base">
+            <h3 className="text-md font-semibold leading-[1.5]">Her Academic Credentials Showcase Her  Commitment to Excellence</h3>
+          <div className="space-y-4">
             <p className='flex gap-2 items-center'><div>
-                <Image src={babcock} alt='babcock icon'/></div><span className='text-[10px]'> Babcock University (BSc in Nutrition & Dietetics)</span></p>
-                <p>First Class BSc in Nutrition and Dietetics</p>
+                <Image src={babcock} alt='babcock icon'/></div><span className='text-[16px]'> Babcock University (BSc in Nutrition & Dietetics)</span></p>
+                <p className='md:text-[16px]'>First Class BSc in Nutrition and Dietetics</p>
             <p className='flex gap-2 items-center mt-2'>
             <div>
-                <Image src={london} alt='London school icon'/></div> <span className='text-[10px]'>London School of Hygiene(MSc in Public Health)</span></p>
-                 <p>Master of Science in Public Health (MScPH)</p>
+                <Image src={london} alt='London school icon'/></div> <span className='text-[16px]'>London School of Hygiene(MSc in Public Health)</span></p>
+                 <p className='md:text-[16px]'>Master of Science in Public Health (MScPH)</p>
           </div>
         </div>
       </div>

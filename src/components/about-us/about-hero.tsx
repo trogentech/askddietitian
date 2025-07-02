@@ -5,7 +5,7 @@ import BookButton from '@/components/button/bookbutton';
 export default function AboutHero() {
   return (
     <section className="py-4 md:py-2 w-full bg-white ">
-      <h1 className="text-xl  md:text-[40px] text-black font-semibold leading-7  md:leading-loose">
+      <h1 className="text-xl  md:text-[40px] text-black font-semibold leading-7 md:leading-[1.5]">
         <span>Why Empowering Health.</span>
         <br />
         <span className="hidden md:inline-block">

@@ -54,19 +54,19 @@ const WhoWeAre = () => {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="bg-blue-50 rounded-2xl ">
+        <div className="bg-blue-high rounded-2xl ">
           <div className="flex items-center gap-3 mb-3">
             <FaBullseye  className="text-blue-500  md:text-xl " />
-            <h3 className="text-lg font-semibold text-gray-800">Our Mission</h3>
+            <h3 className="text-lg font-semibold text-gray-800">Our  Mission</h3>
           </div>
           <ul className="space-y-2 text-xs md:text:md text-black">
             <li className="flex items-start gap-2">
               <FaCheckCircle   className="text-blue-500  md:text-xl mt-1" />
-              To help our clients embrace healthy eating habits that work within their unique environmental contexts
+             <p> To help our clients embrace healthy eating habits that work within their unique environmental contexts</p>
             </li>
             <li className="flex items-start gap-2">
               <FaCheckCircle   className="text-blue-500  md:text-xl mt-1" />
-              To improve overall well-being through sustainable, efficient nutritional choices that create lasting change
+            <p>  To improve overall well-being through sustainable, efficient nutritional choices that create lasting change</p>
             </li>
           </ul>
         </div>

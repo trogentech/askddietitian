@@ -5,65 +5,67 @@ import profileImage from '../../assets/images/lady.png'
 
 const ClinicalExperience = () => {
   return (
-    <section className="  py-12 bg-white">
+    <section className="  bg-white">
       {/* Title and Description */}
-      <div className="max-w-4xl md:text-center mx-auto ">
-        <h2 className="text-lg md:text-4xl md:text-center font-semibold mb-4">
+      <div className="max-w-4xl flex flex-col gap-[26px] md:text-center mx-auto ">
+        <h1 className="text-lg md:text-4xl  md:text-center font-semibold">
           World-Class Clinical Experience
-        </h2>
-        <p className="text-black text-xs md:text-sm  ">
+        </h1>
+        <div className=''>
+          <p className="text-black text-sm md:text-md  ">
           Adeola’s clinical background is built on experience at reputable and leading global medical institutions.
           
         </p>
-        <p className="text-black text-xs md:text-sm  mb-6">This diverse experience across continents has equipped her with a comprehensive understanding of
+        <p className="text-black text-sm md:text-md   md:px-8">This diverse experience across continents has equipped her with a comprehensive understanding of
           nutritional challenges in various healthcare systems and cultural contexts.</p>
+        </div>
         {/* Experience List */}
-        <div className="flex flex-col md:flex-row md:justify-between text-black font-semibold  md:space-y-0 md:space-x-6 mb-10">
-          <p className='text-sm'>National Health Service (NHS) of England</p>
+        <div className="flex flex-col  md:flex-row md:justify-between text-black  font-semibold  md:space-y-0 md:space-x-6 mb-10">
+          <h3 className='mt-2 md:mt-4'>National Health Service (NHS) of England</h3>
           <span
-                className="border-b-2 md:border-r-4 md:border-b-0 border-blue w-8 md:w-10 h-2 md:h-8 "
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high  w-8 md:w-10 h-2 md:h-8 "
               ></span>
-          <p className='text-sm'>Lagos State University Teaching Hospital (LASUTH)</p>
+          <h3 className='mt-2 md:mt-4'>Lagos State University Teaching Hospital (LASUTH)</h3>
           <span
-                className="border-b-2 md:border-r-4 md:border-b-0 border-blue w-8 md:w-10 h-2 md:h-8 "
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high  w-8 md:w-10 h-2 md:h-8 "
               ></span>
-          <p className='text-sm'>Lagos University Teaching Hospital (LUTH)</p>
+          <h3 className='mt-2 md:mt-4'>Lagos University Teaching Hospital (LUTH)</h3>
         </div>
       </div>
 
       {/* Leadership Section */}
-      <div className="flex flex-col md:flex-row items-start mt-20  gap-8 max-w-6xl mx-auto">
-        <div className="md:w-1/2">
-          <h3 className="text-xl md:text-4xl  font-semibold mb-3">
+      <div className="flex flex-col md:flex-row items-start  mt-10 md:mt-20  gap-8 max-w-6xl mx-auto">
+        <div className="md:w-1/2 md:p-[20px]">
+          <h3 className="text-xl md:text-4xl  font-semibold mb-5">
             Global Health Leadership
           </h3>
-          <p className="text-black text-xs mb-4">
+          <p className="text-black text-[14px]  md:text-[16px] mb-5">
             Beyond clinical practice, Adeola has established herself as a public health authority
           </p>
 
           {/* Highlight Cards */}
-          <div className="bg-blue-50 p-4 mb-3 border-l-4 border-blue-700">
-            <p className="text-gray-700 text-md font-medium">
-              Former Health Facilitator with the World Health <br/> Organization (WHO)
-            </p>
+          <div className="bg-blue-50 p-4 mb-5 border-l-4 border-blue-700">
+            <h3 className="text-gray-700 text-sm md:text-md font-bold">
+              Former Health Facilitator with the World Health  Organization (WHO)
+            </h3>
           </div>
           <div className="bg-blue-100 p-4 border-l-4 border-blue-500">
-            <p className="text-black font-bold ">
+            <h3 className="text-black font-bold ">
              Active member of FIDES
-              <span className="text-[10px] leading-loose text-gray-700  font-medium">
+              <span className="text-[14px] md:text-[16px] leading-loose text-gray-700  font-medium">
                 – the WHO initiative uniting healthcare influencers committed to promoting evidence-based health content and combating misinformation.
               </span>
-            </p>
+            </h3>
           </div>
         </div>
 
         {/* Image */}
-      <div className='w-full md:w-1/2 md:h-[400px] rounded-md '>
-          <div className="w-full md:h-full">
+      <div className='w-full md:w-1/2   '>
+          <div className="w-full  rounded-lg">
           <Image
             src={profileImage}
             alt="Adeola"
-            className="md:object-cover w-full h-full"
+            className="md:object-cover w-full  rounded-lg"
            
           />
         </div>

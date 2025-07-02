@@ -47,7 +47,7 @@ export default function Carousel({
         curr === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-white"
       }`}
     >
-      <MdChevronLeft size={20} />
+      <MdChevronLeft size={20} className="text-gray-400"/>
     </button>
 
     <button
@@ -57,7 +57,7 @@ export default function Carousel({
         curr === cards.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-white"
       }`}
     >
-      <MdChevronRight size={20} />
+      <MdChevronRight size={20} className="text-gray-400"/>
     </button>
   </div>
 </div>

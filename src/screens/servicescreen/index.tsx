@@ -15,7 +15,7 @@ const ServiceScreen = () => {
          <section className='md:px-12 mt-10'>
              <WhatToExpect/>
          </section>
-        <section className='mt-5   md:px-12'>
+        <section className='mt-5 md:mt-10  md:px-12'>
              <NutritionApproach/>
          </section>
           <section className='mt-5 px-6 md:px-12'>

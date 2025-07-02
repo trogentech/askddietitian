@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins,Lato } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/homepage/navigation/page";
 import NutritionPage from "@/components/homepage/nutrition-ui/nutrition-ui";
 import Footer from "@/components/homepage/footer/footer";
 
-const font =Poppins({
-  weight: ['100',"200","300","400","500","600","700","800","900"],
-  subsets:["latin"]
-})
-
+const font = Lato({
+  weight: ['100', '300', '400', '700', '900'],
+  subsets: ['latin']
+});
 
 
 export const metadata: Metadata = {
@@ -27,14 +26,14 @@ export default function RootLayout({
       <body
         className={`${font.className} antialiased`}
       >
-          <section className='md:px-12 px-6'>
+          <section className='md:px-12 px-6 '>
           <Navigation/>
       </section>
         {children}
-            <section className='mt-10'>
+            <section className=''>
                 <NutritionPage/>
                </section>
-               <section className='bg-light-gray'>
+               <section className=''>
                 <Footer/>
                </section>
       </body>

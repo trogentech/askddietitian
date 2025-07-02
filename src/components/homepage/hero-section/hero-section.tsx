@@ -5,7 +5,7 @@ import BookButton from '@/components/button/bookbutton';
 export default function Hero() {
   return (
     <section className="py-4 md:py-12 w-full bg-white ">
-      <h1 className="text-xl  md:text-[36px] text-black font-semibold leading-7 md:py-3 md:leading-loose">
+      <h1 className="text-xl  md:text-[36px] text-black font-bold leading-7 md:py-3 md:leading-[1.5]">
         <span>Your Condition Is Unique.</span>
         <br />
         <span className="hidden md:inline-block">
@@ -20,14 +20,14 @@ export default function Hero() {
         Honest expertise. Personalized <br />
         approach. Better health outcomes.
       </p>
-      <p className="hidden md:block text-black ">
+      <p className="hidden text-base md:block  text-black ">
         Honest expertise. Personalized approach. Better health outcomes.
       </p>
 
-      <div className="mt-6 flex  sm:flex-row items-start  gap-2 md:gap-8">
+      <div className="mt-6 flex  sm:flex-row items-center gap-2  md:gap-8">
         <BookButton text="Get a Free Health Assessment" />
 
-        <div className="flex items-center text-sm text-black ">
+        <div className="flex items-center  text-black ">
           <button
             className="flex items-center text-gray-600 hover:text-gray-800"
             aria-label="Play introduction video"
@@ -36,7 +36,7 @@ export default function Hero() {
               ▶
             </span>
           </button>
-          <h4 className="text-xs leading-snug">
+          <h4 className="text-xs md:text-[14px]">
             Watch our <br />
             introduction video
           </h4>

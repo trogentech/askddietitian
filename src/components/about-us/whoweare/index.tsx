@@ -41,7 +41,7 @@ const WhoWeAre = () => {
     <section className="py-12   bg-white">
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h2 className="text-3xl font-semibold text-gray-900 mb-4">Who We Are</h2>
-        <p className="text-black text-[12px] md:text-base  ">
+        <p className="text-black text-sm md:text-base  ">
           We are a team of dedicated Registered Dietitians passionate about creating sustainable dietary
           solutions that work within your unique environment.
         </p>
@@ -56,19 +56,19 @@ const WhoWeAre = () => {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="bg-blue-50 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-3">
-            <div className="flex justify-center items-center w-10 h-10  bg-blue rounded-full">
+            <div className="flex justify-center items-center w-10 h-10  bg-blue-high rounded-full">
                 <Image src={material} alt="health-icon" className="w-6 h-6 rounded-full "/>
             </div>
             <h3 className="text-lg font-semibold text-gray-800">Our Mission</h3>
           </div>
-          <ul className="space-y-2 text-sm text-gray-700">
+          <ul className="space-y-2 text-base text-gray-700">
             <li className="flex items-start gap-2">
               <FaCheckCircle className="text-blue-500 mt-1" />
-              To help our clients embrace healthy eating habits that work within their unique environmental contexts
+             <p> To help our clients embrace healthy eating habits that work within their unique environmental contexts</p>
             </li>
             <li className="flex items-start gap-2">
               <FaCheckCircle className="text-blue-500 mt-1" />
-              To improve overall well-being through sustainable, efficient nutritional choices that create lasting change
+              <p>To improve overall well-being through sustainable, efficient nutritional choices that create lasting change</p>
             </li>
           </ul>
         </div>
@@ -80,11 +80,11 @@ const WhoWeAre = () => {
             </div>
             <h3 className="text-lg font-semibold text-gray-800">Our Vision</h3>
           </div>
-          <p className="text-sm text-gray-700 mb-3">
+          <p className="text-base text-gray-700 ">
             We aspire to become Africa's leading Nutrition and Dietetic consulting firm. This vision guides every
             recommendation we make and every client we serve.
           </p>
-          <p className="text-sm text-gray-700">
+          <p className="text-base text-gray-700">
             We're committed to pioneering advanced nutritional research while maintaining the highest ethical
             standards.
           </p>

@@ -28,7 +28,7 @@ const OurApproach = () => {
   return (
     <div className='  '>
       <h2 className="text-white text-xl md:text-3xl font-semibold text-center my-4">Our Approach</h2>
-      <p className="text-white text-xs md:text-base text-center mt-4 leading-loose">
+      <p className="text-white text-xs md:text-base text-center mt-4 leading-loose md:mb-10 ">
         What sets us apart is our unwavering commitment to quality. Every<br className='hidden md:block'/> service we provide is backed by evidence and excellence.
       </p>
       <div className='flex flex-col md:flex-row md:justify-between bg-black mt-8 '>
