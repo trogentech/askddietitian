@@ -19,12 +19,16 @@ const QuizPage = () => {
   const isFirstStep = currentStepIndex === 0;
   const isLastStep = currentStepIndex === filteredSteps.length - 1;
 
-  const handleAnswerChange = (questionId: string, value: string, isMultiple = false) => {
-    setAnswers(prev => {
+  const handleAnswerChange = (
+    questionId: string,
+    value: string,
+    isMultiple = false
+  ) => {
+    setAnswers((prev) => {
       if (isMultiple) {
         const currentValues = (prev[questionId] as string[]) || [];
         const newValues = currentValues.includes(value)
-          ? currentValues.filter(v => v !== value)
+          ? currentValues.filter((v) => v !== value)
           : [...currentValues, value];
         return { ...prev, [questionId]: newValues };
       }
@@ -33,12 +37,20 @@ const QuizPage = () => {
   };
 
   const handleNext = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     if (!isLastStep) {
       setCurrentStepIndex(currentStepIndex + 1);
     }
   };
 
   const handlePrevious = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     if (!isFirstStep) {
       setCurrentStepIndex(currentStepIndex - 1);
     }
@@ -50,7 +62,7 @@ const QuizPage = () => {
     console.log('Quiz answers:', answers);
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // Analyze results
     const result = analyzeQuizResults(answers);
@@ -68,13 +80,15 @@ const QuizPage = () => {
 
   const handleBookConsultation = () => {
     // Here you would implement booking logic
-    alert('Booking functionality would be implemented here. Redirecting to consultation booking...');
+    alert(
+      'Booking functionality would be implemented here. Redirecting to consultation booking...'
+    );
   };
 
   const canProceed = () => {
     if (!currentStep) return false;
 
-    return currentStep.questions.every(question => {
+    return currentStep.questions.every((question) => {
       if (!question.required) return true;
 
       const answer = answers[question.id];
@@ -87,8 +101,8 @@ const QuizPage = () => {
 
   if (showResults && quizResult) {
     return (
-      <div className="min-h-screen bg-gray-50 py-8">
-        <div className="max-w-4xl mx-auto px-6">
+      <div className='min-h-screen bg-gray-50 py-8'>
+        <div className='max-w-4xl mx-auto px-6'>
           <QuizResults
             result={quizResult}
             onRetakeQuiz={handleRetakeQuiz}
@@ -101,25 +115,29 @@ const QuizPage = () => {
 
   if (!currentStep) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#8B2CC9] mx-auto mb-4" aria-hidden="true"></div>
-          <p className="text-gray-600">Loading quiz...</p>
+      <div className='min-h-screen bg-gray-50 flex items-center justify-center'>
+        <div className='text-center'>
+          <div
+            className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#8B2CC9] mx-auto mb-4'
+            aria-hidden='true'
+          ></div>
+          <p className='text-gray-600'>Loading quiz...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-2xl mx-auto px-6">
+    <div className='min-h-screen bg-gray-50 py-8'>
+      <div className='max-w-2xl mx-auto px-6'>
         {/* Header */}
-        <header className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+        <header className='text-center mb-8'>
+          <h1 className='text-3xl md:text-4xl font-bold text-gray-900 mb-2'>
             Health Assessment
           </h1>
-          <p className="text-gray-600">
-            Help us understand your health needs for personalized recommendations
+          <p className='text-gray-600'>
+            Help us understand your health needs for personalized
+            recommendations
           </p>
         </header>
 
