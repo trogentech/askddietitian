@@ -33,8 +33,16 @@ const QuizStep: React.FC<QuizStepProps> = ({
         {step.questions
           .filter((question) => {
             if (question.condition) {
-              const { field, value } = question.condition;
-              return answers[field] === value;
+              if (typeof question.condition === 'function') {
+                return question.condition(answers);
+              } else {
+                const condition = question.condition as { field: string; value: string | string[] };
+                const { field, value } = condition;
+                if (Array.isArray(value)) {
+                  return value.includes(answers[field] as string);
+                }
+                return answers[field] === value;
+              }
             }
             return true;
           })
