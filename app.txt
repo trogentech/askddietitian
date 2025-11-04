@@ -1,0 +1,24 @@
+Prediabetes	If	Under 18; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	Under 18; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	Under 18; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	Under 18; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	Under 18; Male; Prediabetes; Obese: Yes
+Prediabetes	If	Under 18; Male; Prediabetes; Obese: No
+Prediabetes	If	18 - 39; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	18 - 39; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	18 - 39; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	18 - 39; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	18 - 39; Male; Prediabetes; Obese: Yes
+Prediabetes	If	18 - 39; Male; Prediabetes; Obese: No
+Prediabetes	If	40 - 59; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	40 - 59; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	40 - 59; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	40 - 59; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	40 - 59; Male; Prediabetes; Obese: Yes
+Prediabetes	If	40 - 59; Male; Prediabetes; Obese: No
+Prediabetes	If	60 or above; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	60 or above; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	60 or above; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
+Prediabetes	If	60 or above; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
+Prediabetes	If	60 or above; Male; Prediabetes; Obese: Yes
+Prediabetes	If	60 or above; Male; Prediabetes; Obese: No

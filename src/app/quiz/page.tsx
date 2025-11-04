@@ -19,6 +19,16 @@ const QuizPage = () => {
   const isFirstStep = currentStepIndex === 0;
   const isLastStep = currentStepIndex === filteredSteps.length - 1;
 
+  // Check if current step is a followup step that should end the quiz
+  const isFollowupLastStep =
+    currentStep?.id === 'cholesterol-followup' ||
+    currentStep?.id === 'cancer-followup' ||
+    currentStep?.id === 'kidney-followup' ||
+    currentStep?.id === 'diabetes-followup' ||
+    currentStep?.id === 'pcos-followup' ||
+    currentStep?.id === 'blood-pressure-followup';
+  const shouldShowSubmit = isLastStep || isFollowupLastStep;
+
   const handleAnswerChange = (
     questionId: string,
     value: string,
@@ -162,7 +172,7 @@ const QuizPage = () => {
           canProceed={canProceed()}
           isSubmitting={isSubmitting}
           isFirstStep={isFirstStep}
-          isLastStep={isLastStep}
+          isLastStep={shouldShowSubmit}
         />
       </div>
     </div>
