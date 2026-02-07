@@ -1,10 +1,26 @@
- 
-Traced Next.js server files in: 89.426ms
-19:11:12.055 
-Created all serverless functions in: 111.848ms
-19:11:12.089 
-Collected static files (public/, static/, .next/static): 17.491ms
-19:11:12.377 
-Build Completed in /vercel/output [56s]
-19:11:12.646 
-Error: Vulnerable version of Next.js detected, please update immediately. Learn More: https://vercel.link/CVE-2025-66478
+20:26:04.468 
+Failed to compile.
+20:26:04.469 
+20:26:04.469 
+./next.config.ts:5:3
+20:26:04.470 
+Type error: Object literal may only specify known properties, and 'eslint' does not exist in type 'NextConfig'.
+20:26:04.470 
+20:26:04.470 
+  3 | const nextConfig: NextConfig = {
+20:26:04.470 
+  4 |   /* config options here */
+20:26:04.470 
+> 5 |   eslint: {
+20:26:04.471 
+    |   ^
+20:26:04.471 
+  6 |     ignoreDuringBuilds: true,
+20:26:04.471 
+  7 | },
+20:26:04.471 
+  8 | };
+20:26:04.500 
+Next.js build worker exited with code: 1 and signal: null
+20:26:04.542 
+Error: Command "npm run build" exited with 1
