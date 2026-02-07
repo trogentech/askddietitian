@@ -1,0 +1,215 @@
+Q No.	Category	Questions	Options	Rationale	
+
+NOTE: if the person choose diabetics in the previosu question then they shoudl see thsese series of question...
+
+
+
+
+5	Diabetes status	
+
+Which of the following best describes your situation?	
+1. Prediabetes (elevated blood sugar, but not full diabetes)
+2. Type 2 Diabetes (adult-onset or non-insulin dependent diabetes)
+3. Type 1 Diabetes (autoimmune, insulin-dependent diabetes)
+4. Family history of diabetes, but no diagnosis myself
+5. Not sure (I haven't been diagnosed, but I'm concerned about blood sugar)"	
+
+NOTE ALL THESE Logics:
+Logic: These options cover the common scenarios. If Prediabetes is selected, it indicates the user is in an early stage and prevention of progression is key. 
+Type 2 suggests the user likely needs weight management and blood-sugar control through diet, possibly medications. 
+Type 1 means insulin management is central, and they might benefit from carb counting education. 
+A family history indicates increased risk and need for preventive lifestyle. The Not sure option allows those who haven't seen a doctor to get general advice on risk and healthy habits.)	
+
+
+
+
+6	Weight status (for diabetes)	
+Are you currently overweight or obese? 	
+1. Yes
+2. No	
+
+NOTE: for the logic you can add them somehwere so they will eventually reflect in teh final results and recommendation you will show the person.... use your intution as an expert based on all previous selcetion to carves out the final results and recomdation .. but it should be within the tenets of this logic and ratinale... dont add anyting i didn't add.
+
+
+LOGIC and Rationale: Weight management is crucial in type 2 and prediabetes. 
+If the user is overweight, recommendations will strongly emphasize weight loss as even a 5–7% weight reduction greatly improves blood sugar control1. 
+If the user is not overweight (more common in type 1 or some type 2 individuals, the focus shifts to healthy eating and glucose control without a weight-loss component).
+
+
+
+
+Note: If the user is a female and indicates in demographics that she is pregnant or planning pregnancy, an additional question about gestational diabetes status might be inserted, since dietary recommendations would need to ensure adequate nutrition for pregnancy while controlling blood sugar."	
+(prepare for this if we have additional question about gestation  probabaly for later ... in teh codebase but if there are not ignore it...)
+
+
+					
+
+
+
+
+NOTE:
+Recommendations logic based on previous response form the user till they get to this diabetics stage					
+
+ALSO NOTE: this one baove means create a input box where the user can recive a more detailed recomedation aside form the one give n the recomdation given to thme from all these deduction
+
+
+Category	Statement	Condtions	Note	Recommendation	Detailed recommendation
+- Prediabetes	If	18 - 39; Female; pregnancy:Yes; Diabetes; Prediabetes; Obese: Yes	Summarized recommendation will be displayed after assessment.
+
+- Prediabetes	If	18 - 39; Female; pregnancy:Yes; Diabetes; Prediabetes; Obese: No			
+
+-Prediabetes	If	18 - 39; Female; pregancy: No; Diabetes; Prediabetes; Obese: Yes			
+
+- Prediabetes	If	18 - 39; Female; pregancy: No; Diabetes; Prediabetes; Obese: No			
+
+- Prediabetes	If	18 - 39; Male; Prediabetes; Obese: Yes			
+
+- Prediabetes	If	18 - 39; Male; Prediabetes; Obese: No			
+
+- Prediabetes	If	40 - 59; Female; pregnancy:Yes; Diabetes; Prediabetes; Obese: Yes			
+
+- Prediabetes	If	40 - 59; Female; pregnancy:Yes; Diabetes; Prediabetes; Obese: No			
+
+- Prediabetes	If	40 - 59; Female; pregancy: No; Diabetes; Prediabetes; Obese: Yes			
+
+- Prediabetes	If	40 - 59; Female; pregancy: No; Diabetes; Prediabetes; Obese: No			
+
+- Prediabetes	If	40 - 59; Male; Prediabetes; Obese: Yes			
+
+- Prediabetes	If	40 - 59; Male; Prediabetes; Obese: No			
+
+- Prediabetes	If	60 or above; Female; Diabetes; Prediabetes; Obese: Yes			
+
+- Prediabetes	If	60 or above; Female; Diabetes; Prediabetes; Obese: No			
+
+- Prediabetes	If	60 or above; Male; Prediabetes; Obese: Yes			
+
+- Prediabetes	If	60 or above; Male; Prediabetes; Obese: No			
+
+- Type 2	If	18 - 39; Female; pregnancy:Yes; Diabetes; Type 2; Obese: Yes			
+
+- Type 2	If	18 - 39; Female; pregnancy:Yes; Diabetes; Type 2; Obese: No			
+- Type 2	If	18 - 39; Female; pregancy: No; Diabetes; Type 2; Obese: Yes			
+
+- Type 2	If	18 - 39; Female; pregancy: No; Diabetes; Type 2; Obese: No			
+
+- Type 2	If	18 - 39; Male; Type 2; Obese: Yes			
+
+- Type 2	If	18 - 39; Male; Type 2; Obese: No			
+
+- Type 2	If	40 - 59; Female; pregnancy:Yes; Diabetes; Type 2; Obese: Yes			
+
+- Type 2	If	40 - 59; Female; pregnancy:Yes; Diabetes; Type 2; Obese: No			
+
+- Type 2	If	40 - 59; Female; pregancy: No; Diabetes; Type 2; Obese: Yes			
+
+- Type 2	If	40 - 59; Female; pregancy: No; Diabetes; Type 2; Obese: No			
+
+- Type 2	If	40 - 59; Male; Type 2; Obese: Yes			
+
+- Type 2	If	40 - 59; Male; Type 2; Obese: No			
+
+- Type 2	If	60 or above; Female; Diabetes; Type 2; Obese: Yes			
+
+- Type 2	If	60 or above; Female; Diabetes; Type 2; Obese: No			
+
+- Type 2	If	60 or above; Male; Type 2; Obese: Yes			
+
+- Type 2	If	60 or above; Male; Type 2; Obese: No			
+
+- Type 1	If	18 - 39; Female; pregnancy:Yes; Diabetes; Type 1; Obese: Yes			
+
+- Type 1	If	18 - 39; Female; pregnancy:Yes; Diabetes; Type 1; Obese: No			
+
+- Type 1	If	18 - 39; Female; pregancy: No; Diabetes; Type 1; Obese: Yes			
+
+- Type 1	If	18 - 39; Female; pregancy: No; Diabetes; Type 1; Obese: No			
+
+- Type 1	If	18 - 39; Male; Type 1; Obese: Yes			
+
+- Type 1	If	18 - 39; Male; Type 1; Obese: No			
+
+- Type 1	If	40 - 59; Female; pregnancy:Yes; Diabetes; Type 1; Obese: Yes			
+
+- Type 1	If	40 - 59; Female; pregnancy:Yes; Diabetes; Type 1; Obese: No			
+
+- Type 1	If	40 - 59; Female; pregancy: No; Diabetes; Type 1; Obese: Yes			
+
+- Type 1	If	40 - 59; Female; pregancy: No; Diabetes; Type 1; Obese: No			
+
+- Type 1	If	40 - 59; Male; Type 1; Obese: Yes			
+
+- Type 1	If	40 - 59; Male; Type 1; Obese: No			
+
+- Type 1	If	60 or above; Female; Diabetes; Type 1; Obese: Yes			
+
+- Type 1	If	60 or above; Female; Diabetes; Type 1; Obese: No			
+
+- Type 1	If	60 or above; Male; Type 1; Obese: Yes			
+
+- Type 1	If	60 or above; Male; Type 1; Obese: No			
+
+
+- Family History	If	18 - 39; Female; pregnancy:Yes; Diabetes; Family History; Obese: Yes			
+
+- Family History	If	18 - 39; Female; pregnancy:Yes; Diabetes; Family History; Obese: No			
+
+-Family History	If	18 - 39; Female; pregancy: No; Diabetes; Family History; Obese: Yes			
+
+- Family History	If	18 - 39; Female; pregancy: No; Diabetes; Family History; Obese: No			
+
+- Family History	If	18 - 39; Male; Family History; Obese: Yes			
+
+- Family History	If	18 - 39; Male; Family History; Obese: No			
+
+- Family History	If	40 - 59; Female; pregnancy:Yes; Diabetes; Family History; Obese: Yes			
+
+- Family History	If	40 - 59; Female; pregnancy:Yes; Diabetes; Family History; Obese: No			
+
+- Family History	If	40 - 59; Female; pregancy: No; Diabetes; Family History; Obese: Yes			
+
+- Family History	If	40 - 59; Female; pregancy: No; Diabetes; Family History; Obese: No			
+
+- Family History	If	40 - 59; Male; Family History; Obese: Yes			
+
+- Family History	If	40 - 59; Male; Family History; Obese: No			
+
+- Family History	If	60 or above; Female; Diabetes; Family History; Obese: Yes			
+
+- Family History	If	60 or above; Female; Diabetes; Family History; Obese: No			
+
+- Family History	If	60 or above; Male; Family History; Obese: Yes			
+
+- Family History	If	60 or above; Male; Family History; Obese: No			
+
+- Not Sure	If	18 - 39; Female; pregnancy:Yes; Diabetes; Not sure; Obese: Yes			
+
+- Not Sure	If	18 - 39; Female; pregnancy:Yes; Diabetes; Not sure; Obese: No			
+
+- Not Sure	If	18 - 39; Female; pregancy: No; Diabetes; Not sure; Obese: Yes			
+
+- Not Sure	If	18 - 39; Female; pregancy: No; Diabetes; Not sure; Obese: No			
+
+-Not Sure	If	18 - 39; Male; Not sure; Obese: Yes			
+
+- Not Sure	If	18 - 39; Male; Not surey; Obese: No			
+
+- Not Sure	If	40 - 59; Female; pregnancy:Yes; Diabetes; Not sure; Obese: Yes			
+
+- Not Sure	If	40 - 59; Female; pregnancy:Yes; Diabetes; Not sure; Obese: No			
+
+- Not Sure	If	40 - 59; Female; pregancy: No; Diabetes; Not sure; Obese: Yes			
+
+- Not Sure	If	40 - 59; Female; pregancy: No; Diabetes; Not sure; Obese: No			
+
+- Not Sure	If	40 - 59; Male; Not sure; Obese: Yes			
+
+- Not Sure	If	40 - 59; Male; Not sure; Obese: No			
+
+- Not Sure	If	60 or above; Female; Diabetes; Not sure; Obese: Yes			
+
+- Not Sure	If	60 or above; Female; Diabetes; Not sure; Obese: No			
+
+- Not Sure	If	60 or above; Male; Not sure; Obese: Yes			
+
+- Not Sure	If	60 or above; Male; Not sure; Obese: No			

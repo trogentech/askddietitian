@@ -1,0 +1,733 @@
+import { RecommendationRule } from '../recommendationRules';
+import { generateDiabetesRecommendation } from './diabetesGenerator';
+
+/**
+ * Diabetes Recommendations based on changes3.txt - Smart Template System
+ * Covers all 96 scenarios: 3 age groups × 2 genders × 2 pregnancy × 6 diabetes types × 2 weight status
+ * 
+ * LOGIC & RATIONALE (from changes3.txt lines 16-35):
+ * 
+ * 1. Type 1 Diabetes:
+ *    - Focus on insulin management and carb counting
+ *    - Medical nutrition therapy with meal planning
+ *    - Blood sugar monitoring and pattern recognition
+ * 
+ * 2. Type 2 Diabetes:
+ *    - Weight management if overweight/obese (5-7% weight loss improves blood sugar)
+ *    - Blood-sugar control through diet (low glycemic index, portion control)
+ *    - Focus on prevention of complications
+ * 
+ * 3. Gestational Diabetes:
+ *    - Safe pregnancy nutrition focused on stabilizing blood sugar
+ *    - Carb distribution throughout the day
+ *    - Monitoring for mother and baby health
+ * 
+ * 4. Prediabetes:
+ *    - STRONGLY emphasize weight loss (5-7% reduces diabetes risk by ~58%)
+ *    - Lifestyle changes to prevent progression
+ *    - Regular monitoring
+ * 
+ * 5. Family History:
+ *    - Preventive education on diabetes risk
+ *    - Healthy lifestyle to reduce risk
+ *    - Regular screening
+ * 
+ * 6. Not Sure:
+ *    - Clarify diagnosis status
+ *    - General healthy eating guidance
+ *    - Recommend medical consultation
+ * 
+ * Weight Status Modifier:
+ *    - If overweight/obese: Emphasize weight management alongside condition-specific advice
+ *    - If normal weight: Focus more on blood sugar control and prevention
+ */
+
+// Generate all 96 diabetes recommendation scenarios
+const ages = ['18-39', '40-59', '60-above'];
+const genders = ['male', 'female'];
+const pregnancyStatuses = ['yes', 'no'];
+const diabetesTypes = ['type1', 'type2', 'gestational', 'prediabetes', 'family-history', 'not-sure'];
+const weightStatuses = ['lose', 'maintain'];
+
+export const diabetesRecommendations: RecommendationRule[] = [];
+
+// Generate all combinations
+for (const age of ages) {
+  for (const gender of genders) {
+    for (const pregnancy of pregnancyStatuses) {
+      // Skip pregnancy scenarios for males
+      if (gender === 'male' && pregnancy === 'yes') continue;
+      
+      // Skip pregnancy scenarios for 60+ (rare/not applicable)
+      if (age === '60-above' && pregnancy === 'yes') continue;
+      
+      for (const diabetesStatus of diabetesTypes) {
+        // Gestational diabetes only applies to pregnant women
+        if (diabetesStatus === 'gestational' && pregnancy !== 'yes') continue;
+        
+        for (const weightStatus of weightStatuses) {
+          const recommendation = generateDiabetesRecommendation(
+            age,
+            gender,
+            pregnancy,
+            diabetesStatus,
+            weightStatus
+          );
+          diabetesRecommendations.push(recommendation);
+        }
+      }
+    }
+  }
+}
+
+// Legacy fallback recommendations (no age specified) - for backward compatibility
+const legacyRecommendations: RecommendationRule[] = [
+  // ========================================
+  // TYPE 1 DIABETES RECOMMENDATIONS
+  // ========================================
+  
+  // Type 1 + 18-39 + Female + Pregnant + Overweight
+  {
+    id: 'diabetes-type1-18-39-female-pregnant-overweight',
+    conditions: {
+      age: '18-39',
+      gender: 'female',
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      pregnancy: 'yes',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'high',
+    summary: 'You have Type 1 diabetes and are pregnant in your reproductive years, which requires specialized nutrition care for both insulin management and healthy pregnancy. As an overweight pregnant woman with Type 1 diabetes, you need careful carbohydrate counting, frequent blood sugar monitoring, and safe pregnancy nutrition that supports both you and your baby while managing insulin needs.',
+    recommendations: [
+      'Work closely with your healthcare team (endocrinologist, OB-GYN, registered dietitian) for coordinated care throughout pregnancy',
+      'Practice precise carbohydrate counting and insulin-to-carb ratios adjusted for pregnancy',
+      'Monitor blood sugar more frequently (before/after meals, bedtime) with pregnancy-specific target ranges',
+      'Focus on nutrient-dense foods to support baby\'s growth while managing blood sugar',
+      'Avoid excessive weight gain during pregnancy while ensuring adequate nutrition for baby\'s development'
+    ],
+    detailedRecommendations: [
+      'Schedule regular appointments with maternal-fetal medicine specialist and certified diabetes educator',
+      'Learn to adjust insulin doses based on changing pregnancy hormone levels',
+      'Consume balanced meals with complex carbohydrates, lean proteins, healthy fats, and plenty of vegetables',
+      'Stay hydrated and include pregnancy-specific nutrients (folate, iron, calcium, DHA)',
+      'Prepare for postpartum blood sugar changes and breastfeeding nutrition needs',
+      'Keep emergency glucose sources available for hypoglycemia episodes',
+      'Practice stress management and adequate sleep for blood sugar stability'
+    ]
+  },
+
+  // Type 1 + 18-39 + Female + Pregnant + Normal Weight
+  {
+    id: 'diabetes-type1-18-39-female-pregnant-normal',
+    conditions: {
+      age: '18-39',
+      gender: 'female',
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      pregnancy: 'yes',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'high',
+    summary: 'You have Type 1 diabetes and are pregnant at a healthy weight in your reproductive years, requiring specialized nutrition care for insulin management and healthy pregnancy. Your focus should be on precise carbohydrate counting, frequent blood sugar monitoring, and nutrient-dense eating to support your baby\'s growth while maintaining stable blood sugar levels.',
+    recommendations: [
+      'Work with your healthcare team for coordinated diabetes and pregnancy care',
+      'Maintain precise carbohydrate counting with pregnancy-adjusted insulin-to-carb ratios',
+      'Monitor blood sugar frequently with pregnancy-specific target ranges',
+      'Eat nutrient-dense foods to support healthy weight gain during pregnancy (typically 25-35 lbs)',
+      'Focus on balanced meals with complex carbohydrates, lean proteins, and healthy fats'
+    ],
+    detailedRecommendations: [
+      'Attend all prenatal appointments and work with certified diabetes educator',
+      'Adjust insulin doses as pregnancy hormones change (especially 2nd and 3rd trimesters)',
+      'Include foods rich in folate, iron, calcium, omega-3s, and other pregnancy nutrients',
+      'Plan for 3 meals and 2-3 snacks daily to maintain stable blood sugar',
+      'Prepare for postpartum insulin adjustments and breastfeeding nutrition',
+      'Keep fast-acting glucose available for low blood sugar episodes',
+      'Practice stress reduction techniques and prioritize adequate sleep'
+    ]
+  },
+
+  // Type 1 + 18-39 + Female + Not Pregnant + Overweight
+  {
+    id: 'diabetes-type1-18-39-female-not-pregnant-overweight',
+    conditions: {
+      age: '18-39',
+      gender: 'female',
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      pregnancy: 'no',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'medium',
+    summary: 'You have Type 1 diabetes and want to lose weight in your adult years, which requires careful balance between insulin management and weight reduction. Focus on consistent carbohydrate counting, blood sugar monitoring, and working with your healthcare team to adjust insulin doses as you make dietary changes for safe, sustainable weight loss.',
+    recommendations: [
+      'Work with a registered dietitian experienced in Type 1 diabetes for personalized meal planning',
+      'Practice consistent carbohydrate counting and maintain your insulin-to-carb ratios',
+      'Monitor blood sugar before and after meals to understand how foods affect you',
+      'Focus on gradual weight loss (1-2 lbs per week) while maintaining stable blood sugar',
+      'Choose nutrient-dense, lower-calorie foods like non-starchy vegetables, lean proteins, and healthy fats'
+    ],
+    detailedRecommendations: [
+      'Adjust insulin doses with your healthcare provider as your eating patterns change',
+      'Use techniques like measuring portions and reading nutrition labels for accurate carb counting',
+      'Include physical activity gradually (with blood sugar monitoring before/during/after exercise)',
+      'Plan balanced meals with controlled portions of complex carbohydrates',
+      'Stay hydrated and avoid sugary drinks that spike blood sugar',
+      'Keep emergency glucose sources for hypoglycemia, especially when exercising or eating less',
+      'Track food intake, blood sugar patterns, and insulin doses to identify trends'
+    ]
+  },
+
+  // Type 1 + 18-39 + Female + Not Pregnant + Normal Weight
+  {
+    id: 'diabetes-type1-18-39-female-not-pregnant-normal',
+    conditions: {
+      age: '18-39',
+      gender: 'female',
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      pregnancy: 'no',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'medium',
+    summary: 'You have Type 1 diabetes at a healthy weight in your adult years, requiring ongoing insulin management and carbohydrate counting. Your focus should be on maintaining stable blood sugar levels through consistent meal planning, regular monitoring, and coordination with your healthcare team to prevent complications.',
+    recommendations: [
+      'Work with a registered dietitian for personalized Type 1 diabetes meal planning',
+      'Maintain consistent carbohydrate counting and insulin-to-carb ratios',
+      'Monitor blood sugar regularly (before meals, 2 hours after meals, bedtime)',
+      'Eat balanced meals with complex carbohydrates, lean proteins, and healthy fats',
+      'Focus on long-term blood sugar control to prevent diabetes complications'
+    ],
+    detailedRecommendations: [
+      'Attend regular appointments with your endocrinologist and diabetes educator',
+      'Learn to adjust insulin for different foods, activities, and life situations',
+      'Choose low glycemic index foods to minimize blood sugar spikes',
+      'Include non-starchy vegetables, whole grains, lean proteins, and healthy fats daily',
+      'Stay physically active with appropriate blood sugar monitoring',
+      'Always carry fast-acting glucose for hypoglycemia episodes',
+      'Track A1C levels and work toward target range (typically <7%)'
+    ]
+  },
+
+  // Type 1 + 18-39 + Male + Overweight
+  {
+    id: 'diabetes-type1-18-39-male-overweight',
+    conditions: {
+      age: '18-39',
+      gender: 'male',
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'medium',
+    summary: 'You have Type 1 diabetes and want to lose weight as a young adult male, requiring careful balance between insulin management and weight reduction. Focus on consistent carbohydrate counting, blood sugar monitoring, and working with your healthcare team to adjust insulin doses as you make dietary changes for safe weight loss.',
+    recommendations: [
+      'Work with a registered dietitian experienced in Type 1 diabetes for personalized meal planning',
+      'Practice consistent carbohydrate counting and maintain your insulin-to-carb ratios',
+      'Monitor blood sugar before and after meals to understand how foods affect you',
+      'Focus on gradual weight loss (1-2 lbs per week) while maintaining stable blood sugar',
+      'Choose nutrient-dense, lower-calorie foods and include regular physical activity'
+    ],
+    detailedRecommendations: [
+      'Adjust insulin doses with your healthcare provider as your eating and activity patterns change',
+      'Use measuring tools and nutrition labels for accurate carbohydrate counting',
+      'Include physical activity with proper blood sugar monitoring (check before/during/after exercise)',
+      'Plan balanced meals with controlled portions of complex carbohydrates and adequate protein',
+      'Stay hydrated and avoid sugary drinks that spike blood sugar',
+      'Keep emergency glucose sources for hypoglycemia, especially when exercising',
+      'Track food intake, blood sugar patterns, and insulin doses to identify trends'
+    ]
+  },
+
+  // Type 1 + 18-39 + Male + Normal Weight
+  {
+    id: 'diabetes-type1-18-39-male-normal',
+    conditions: {
+      age: '18-39',
+      gender: 'male',
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'medium',
+    summary: 'You have Type 1 diabetes at a healthy weight as a young adult male, requiring ongoing insulin management and carbohydrate counting. Your focus should be on maintaining stable blood sugar levels through consistent meal planning, regular monitoring, and coordination with your healthcare team to prevent complications.',
+    recommendations: [
+      'Work with a registered dietitian for personalized Type 1 diabetes meal planning',
+      'Maintain consistent carbohydrate counting and insulin-to-carb ratios',
+      'Monitor blood sugar regularly (before meals, 2 hours after meals, bedtime)',
+      'Eat balanced meals with complex carbohydrates, lean proteins, and healthy fats',
+      'Focus on long-term blood sugar control to prevent diabetes complications'
+    ],
+    detailedRecommendations: [
+      'Attend regular appointments with your endocrinologist and diabetes educator',
+      'Learn to adjust insulin for different foods, activities, and life situations',
+      'Choose low glycemic index foods to minimize blood sugar spikes',
+      'Include non-starchy vegetables, whole grains, lean proteins, and healthy fats daily',
+      'Stay physically active with appropriate blood sugar monitoring',
+      'Always carry fast-acting glucose for hypoglycemia episodes',
+      'Track A1C levels and work toward target range (typically <7%)'
+    ]
+  },
+
+  // Type 1 + Pregnant + Normal Weight
+  {
+    id: 'diabetes-type1-pregnant-normal',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      pregnancy: 'yes',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'high',
+    summary: 'You have Type 1 diabetes and are pregnant at a healthy weight, requiring specialized nutrition care for insulin management and healthy pregnancy. Your focus should be on precise carbohydrate counting, frequent blood sugar monitoring, and nutrient-dense eating to support your baby\'s growth while maintaining stable blood sugar levels.',
+    recommendations: [
+      'Work with your healthcare team for coordinated diabetes and pregnancy care',
+      'Maintain precise carbohydrate counting with pregnancy-adjusted insulin-to-carb ratios',
+      'Monitor blood sugar frequently with pregnancy-specific target ranges',
+      'Eat nutrient-dense foods to support healthy weight gain during pregnancy (typically 25-35 lbs)',
+      'Focus on balanced meals with complex carbohydrates, lean proteins, and healthy fats'
+    ],
+    detailedRecommendations: [
+      'Attend all prenatal appointments and work with certified diabetes educator',
+      'Adjust insulin doses as pregnancy hormones change (especially 2nd and 3rd trimesters)',
+      'Include foods rich in folate, iron, calcium, omega-3s, and other pregnancy nutrients',
+      'Plan for 3 meals and 2-3 snacks daily to maintain stable blood sugar',
+      'Prepare for postpartum insulin adjustments and breastfeeding nutrition',
+      'Keep fast-acting glucose available for low blood sugar episodes',
+      'Practice stress reduction techniques and prioritize adequate sleep'
+    ]
+  },
+
+  // Type 1 + Not Pregnant + Overweight
+  {
+    id: 'diabetes-type1-not-pregnant-overweight',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      pregnancy: 'no',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'medium',
+    summary: 'You have Type 1 diabetes and want to lose weight, which requires careful balance between insulin management and weight reduction. Focus on consistent carbohydrate counting, blood sugar monitoring, and working with your healthcare team to adjust insulin doses as you make dietary changes for safe, sustainable weight loss.',
+    recommendations: [
+      'Work with a registered dietitian experienced in Type 1 diabetes for personalized meal planning',
+      'Practice consistent carbohydrate counting and maintain your insulin-to-carb ratios',
+      'Monitor blood sugar before and after meals to understand how foods affect you',
+      'Focus on gradual weight loss (1-2 lbs per week) while maintaining stable blood sugar',
+      'Choose nutrient-dense, lower-calorie foods like non-starchy vegetables, lean proteins, and healthy fats'
+    ],
+    detailedRecommendations: [
+      'Adjust insulin doses with your healthcare provider as your eating patterns change',
+      'Use techniques like measuring portions and reading nutrition labels for accurate carb counting',
+      'Include physical activity gradually (with blood sugar monitoring before/during/after exercise)',
+      'Plan balanced meals with controlled portions of complex carbohydrates',
+      'Stay hydrated and avoid sugary drinks that spike blood sugar',
+      'Keep emergency glucose sources for hypoglycemia, especially when exercising or eating less',
+      'Track food intake, blood sugar patterns, and insulin doses to identify trends'
+    ]
+  },
+
+  // Type 1 + Not Pregnant + Normal Weight
+  {
+    id: 'diabetes-type1-not-pregnant-normal',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'type1',
+      pregnancy: 'no',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'medium',
+    summary: 'You have Type 1 diabetes at a healthy weight, requiring ongoing insulin management and carbohydrate counting. Your focus should be on maintaining stable blood sugar levels through consistent meal planning, regular monitoring, and coordination with your healthcare team to prevent complications.',
+    recommendations: [
+      'Work with a registered dietitian for personalized Type 1 diabetes meal planning',
+      'Maintain consistent carbohydrate counting and insulin-to-carb ratios',
+      'Monitor blood sugar regularly (before meals, 2 hours after meals, bedtime)',
+      'Eat balanced meals with complex carbohydrates, lean proteins, and healthy fats',
+      'Focus on long-term blood sugar control to prevent diabetes complications'
+    ],
+    detailedRecommendations: [
+      'Attend regular appointments with your endocrinologist and diabetes educator',
+      'Learn to adjust insulin for different foods, activities, and life situations',
+      'Choose low glycemic index foods to minimize blood sugar spikes',
+      'Include non-starchy vegetables, whole grains, lean proteins, and healthy fats daily',
+      'Stay physically active with appropriate blood sugar monitoring',
+      'Always carry fast-acting glucose for hypoglycemia episodes',
+      'Track A1C levels and work toward target range (typically <7%)'
+    ]
+  },
+
+  // ========================================
+  // TYPE 2 DIABETES RECOMMENDATIONS
+  // ========================================
+  
+  // Type 2 + Pregnant + Overweight
+  {
+    id: 'diabetes-type2-pregnant-overweight',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'type2',
+      pregnancy: 'yes',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'high',
+    summary: 'You have Type 2 diabetes and are pregnant while overweight, requiring careful nutrition management for both blood sugar control and healthy pregnancy. Focus on balanced eating that stabilizes blood sugar, supports baby\'s growth, and manages weight gain appropriately during pregnancy without attempting weight loss.',
+    recommendations: [
+      'Work with your healthcare team (OB-GYN, endocrinologist, dietitian) for coordinated pregnancy and diabetes care',
+      'Focus on blood sugar control through balanced meals with controlled carbohydrates',
+      'Monitor blood sugar as recommended (typically before meals and 1-2 hours after)',
+      'Eat nutrient-dense foods that support baby\'s development while managing blood sugar',
+      'Aim for appropriate pregnancy weight gain as recommended by your healthcare provider'
+    ],
+    detailedRecommendations: [
+      'Follow pregnancy-specific blood sugar targets (typically stricter than non-pregnancy)',
+      'Distribute carbohydrates evenly throughout the day (3 meals, 2-3 snacks)',
+      'Choose complex carbohydrates, lean proteins, healthy fats, and plenty of vegetables',
+      'Include pregnancy-essential nutrients (folate, iron, calcium, DHA omega-3s)',
+      'Stay hydrated and limit sugary beverages that spike blood sugar',
+      'Take medications as prescribed (insulin if needed during pregnancy)',
+      'Prepare for postpartum diabetes screening and continued health management'
+    ]
+  },
+
+  // Type 2 + Pregnant + Normal Weight
+  {
+    id: 'diabetes-type2-pregnant-normal',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'type2',
+      pregnancy: 'yes',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'high',
+    summary: 'You have Type 2 diabetes and are pregnant at a healthy weight, requiring focused blood sugar management and pregnancy nutrition. Your priority is maintaining stable blood sugar through balanced eating while supporting healthy pregnancy weight gain and baby\'s development.',
+    recommendations: [
+      'Work closely with your healthcare team throughout pregnancy',
+      'Maintain stable blood sugar through consistent, balanced meals',
+      'Monitor blood sugar as recommended by your healthcare provider',
+      'Eat nutrient-dense foods to support healthy pregnancy weight gain (typically 25-35 lbs)',
+      'Focus on complex carbohydrates, lean proteins, healthy fats, and vegetables'
+    ],
+    detailedRecommendations: [
+      'Follow pregnancy blood sugar targets set by your healthcare team',
+      'Eat regular meals and snacks to maintain stable blood sugar and energy',
+      'Choose low glycemic index carbohydrates paired with protein and healthy fats',
+      'Include foods rich in folate, iron, calcium, and omega-3 fatty acids',
+      'Stay well-hydrated and avoid sugary drinks',
+      'Take prescribed medications or insulin as directed',
+      'Plan for postpartum diabetes care and potential breastfeeding nutrition'
+    ]
+  },
+
+  // Type 2 + Not Pregnant + Overweight (Most common scenario)
+  {
+    id: 'diabetes-type2-not-pregnant-overweight',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'type2',
+      pregnancy: 'no',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'medium',
+    summary: 'You have Type 2 diabetes and are overweight, making weight loss a key priority. Even modest weight loss of 5-7% of your body weight can significantly improve blood sugar control, reduce medication needs, and lower your risk of diabetes complications. Focus on sustainable dietary changes, portion control, and blood sugar management.',
+    recommendations: [
+      'Work with a registered dietitian to create a personalized meal plan for weight loss and blood sugar control',
+      'Aim for gradual, sustainable weight loss of 1-2 pounds per week (5-7% total body weight)',
+      'Choose low glycemic index foods and control portion sizes, especially carbohydrates',
+      'Monitor blood sugar regularly to understand how foods affect your levels',
+      'Include physical activity most days of the week, starting gradually'
+    ],
+    detailedRecommendations: [
+      'Fill half your plate with non-starchy vegetables, 1/4 with lean protein, 1/4 with complex carbohydrates',
+      'Reduce refined carbohydrates (white bread, white rice, sugary foods) and choose whole grains',
+      'Practice portion control using measuring cups, food scale, or the plate method',
+      'Stay hydrated with water and avoid sugary beverages (soda, juice, sweetened tea)',
+      'Plan balanced meals and snacks to prevent extreme hunger and overeating',
+      'Take diabetes medications as prescribed and monitor for adjustments as you lose weight',
+      'Track your food intake, blood sugar levels, and weight to monitor progress',
+      'Join diabetes support groups or education programs for motivation and guidance'
+    ]
+  },
+
+  // Type 2 + Not Pregnant + Normal Weight
+  {
+    id: 'diabetes-type2-not-pregnant-normal',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'type2',
+      pregnancy: 'no',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'medium',
+    summary: 'You have Type 2 diabetes at a healthy weight, requiring focused blood sugar management through diet. Your priority is maintaining stable blood sugar levels, preventing complications, and keeping your weight stable through consistent, balanced eating and regular monitoring.',
+    recommendations: [
+      'Work with a registered dietitian for diabetes-specific meal planning',
+      'Focus on blood sugar control through consistent carbohydrate intake',
+      'Monitor blood sugar before and after meals to understand food impacts',
+      'Maintain your healthy weight through balanced, portion-controlled meals',
+      'Choose low glycemic index foods and pair carbohydrates with protein'
+    ],
+    detailedRecommendations: [
+      'Eat consistent amounts of carbohydrates at each meal for stable blood sugar',
+      'Choose complex carbohydrates (whole grains, legumes) over refined options',
+      'Fill half your plate with non-starchy vegetables at meals',
+      'Include lean proteins (fish, poultry, legumes, tofu) and healthy fats (nuts, avocado, olive oil)',
+      'Limit added sugars and sugary beverages',
+      'Stay physically active to improve insulin sensitivity',
+      'Take medications as prescribed and attend regular check-ups',
+      'Track A1C levels and aim for target range (typically <7%)'
+    ]
+  },
+
+  // ========================================
+  // GESTATIONAL DIABETES RECOMMENDATIONS
+  // ========================================
+  
+  // Gestational + Overweight
+  {
+    id: 'diabetes-gestational-overweight',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'gestational',
+      pregnancy: 'yes',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'high',
+    summary: 'You have gestational diabetes and are overweight during pregnancy, requiring specialized nutrition care to manage blood sugar while supporting healthy baby development. Focus on balanced eating that controls blood sugar without compromising nutrition needed for pregnancy, and manage weight gain appropriately without attempting weight loss.',
+    recommendations: [
+      'Work closely with your healthcare team (OB-GYN, dietitian, diabetes educator) throughout pregnancy',
+      'Control blood sugar through balanced meals with distributed carbohydrates',
+      'Monitor blood sugar as directed (typically fasting and 1-2 hours after meals)',
+      'Focus on nutrient-dense foods that support baby while managing blood sugar',
+      'Aim for appropriate pregnancy weight gain based on your healthcare provider\'s guidance'
+    ],
+    detailedRecommendations: [
+      'Distribute carbohydrates evenly across 3 meals and 2-3 snacks daily',
+      'Choose complex carbohydrates with low to moderate glycemic index',
+      'Pair carbohydrates with protein and healthy fats to slow blood sugar rise',
+      'Include plenty of non-starchy vegetables for nutrients and fiber',
+      'Consume adequate protein for baby\'s growth (typically 70-100g daily)',
+      'Include pregnancy-essential nutrients (folate, iron, calcium, DHA)',
+      'Stay hydrated and avoid sugary drinks',
+      'Take insulin if prescribed by your healthcare provider',
+      'Plan for postpartum diabetes screening (6-12 weeks after delivery)'
+    ]
+  },
+
+  // Gestational + Normal Weight
+  {
+    id: 'diabetes-gestational-normal',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'gestational',
+      pregnancy: 'yes',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'high',
+    summary: 'You have gestational diabetes at a healthy pre-pregnancy weight, requiring careful blood sugar management while supporting healthy pregnancy nutrition. Focus on balanced eating with controlled carbohydrates to maintain stable blood sugar while gaining appropriate weight for a healthy pregnancy.',
+    recommendations: [
+      'Work with your healthcare team for gestational diabetes management',
+      'Maintain stable blood sugar through consistent, balanced meals',
+      'Monitor blood sugar as recommended by your healthcare provider',
+      'Eat nutrient-dense foods supporting healthy pregnancy weight gain (typically 25-35 lbs)',
+      'Distribute carbohydrates throughout the day to prevent blood sugar spikes'
+    ],
+    detailedRecommendations: [
+      'Eat 3 balanced meals and 2-3 snacks daily for stable blood sugar and energy',
+      'Choose low to moderate glycemic index carbohydrates',
+      'Include lean proteins, healthy fats, and plenty of vegetables at each meal',
+      'Consume adequate calories for pregnancy (typically 300-500 extra calories per day)',
+      'Include foods rich in folate, iron, calcium, omega-3s, and other pregnancy nutrients',
+      'Stay well-hydrated with water throughout the day',
+      'Limit processed foods and added sugars',
+      'Take medications or insulin if prescribed',
+      'Prepare for postpartum lifestyle to reduce future Type 2 diabetes risk'
+    ]
+  },
+
+  // ========================================
+  // PREDIABETES RECOMMENDATIONS
+  // ========================================
+  
+  // Prediabetes + Overweight (CRITICAL for prevention)
+  {
+    id: 'diabetes-prediabetes-overweight',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'prediabetes',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'medium',
+    summary: 'You have prediabetes and are overweight, putting you at significant risk for developing Type 2 diabetes. The good news: losing just 5-7% of your body weight can reduce your risk of developing diabetes by up to 58%. This is your opportunity to prevent or delay diabetes through lifestyle changes focused on weight loss, healthy eating, and increased physical activity.',
+    recommendations: [
+      'Prioritize weight loss of 5-7% of your current body weight as your primary goal',
+      'Work with a registered dietitian to create a sustainable weight loss plan',
+      'Focus on whole foods, portion control, and reducing refined carbohydrates',
+      'Increase physical activity to at least 150 minutes per week',
+      'Monitor your progress and get regular blood sugar screenings'
+    ],
+    detailedRecommendations: [
+      'Set realistic weight loss goals (1-2 pounds per week for sustainable results)',
+      'Reduce portion sizes and use the plate method (1/2 vegetables, 1/4 protein, 1/4 carbs)',
+      'Choose complex carbohydrates (whole grains, legumes) and limit refined sugars',
+      'Eliminate or reduce sugary beverages (soda, juice, sweetened coffee drinks)',
+      'Include lean proteins, healthy fats, and plenty of fiber-rich foods',
+      'Stay active with a combination of aerobic exercise and strength training',
+      'Get adequate sleep (7-9 hours) as poor sleep increases diabetes risk',
+      'Manage stress through healthy coping strategies',
+      'Consider joining a diabetes prevention program for structured support',
+      'Schedule follow-up blood sugar tests every 3-6 months to track progress'
+    ]
+  },
+
+  // Prediabetes + Normal Weight
+  {
+    id: 'diabetes-prediabetes-normal',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'prediabetes',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'medium',
+    summary: 'You have prediabetes at a healthy weight, indicating your risk for Type 2 diabetes may be related to factors other than weight such as genetics, inactivity, or dietary patterns. Focus on blood sugar management through balanced nutrition, regular physical activity, and lifestyle modifications to prevent progression to diabetes.',
+    recommendations: [
+      'Focus on blood sugar control through consistent, balanced eating',
+      'Increase physical activity to improve insulin sensitivity',
+      'Work with a registered dietitian for prediabetes-specific nutrition guidance',
+      'Choose low glycemic index foods and control carbohydrate portions',
+      'Get regular blood sugar screenings every 3-6 months'
+    ],
+    detailedRecommendations: [
+      'Eat balanced meals with complex carbohydrates, lean proteins, and healthy fats',
+      'Choose whole grains, legumes, and fiber-rich foods to stabilize blood sugar',
+      'Limit refined carbohydrates and added sugars',
+      'Include non-starchy vegetables at most meals',
+      'Stay active with at least 150 minutes of moderate exercise weekly',
+      'Practice portion control even at a healthy weight',
+      'Get adequate sleep (7-9 hours) for metabolic health',
+      'Manage stress through healthy techniques',
+      'Consider diabetes prevention programs for guidance and support',
+      'Monitor blood sugar trends to assess your prevention efforts'
+    ]
+  },
+
+  // ========================================
+  // FAMILY HISTORY (PREVENTIVE)
+  // ========================================
+  
+  // Family History + Overweight
+  {
+    id: 'diabetes-family-history-overweight',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'family-history',
+      'weight-status-diabetes': 'lose'
+    },
+    priority: 'low',
+    summary: 'You have a family history of diabetes and are overweight, increasing your risk of developing diabetes in the future. Taking action now through weight loss and healthy lifestyle changes can significantly reduce your risk. Focus on sustainable weight loss, balanced nutrition, and regular physical activity as preventive measures.',
+    recommendations: [
+      'Prioritize achieving and maintaining a healthy weight to reduce diabetes risk',
+      'Adopt a balanced, whole-foods diet focused on diabetes prevention',
+      'Increase physical activity to at least 150 minutes per week',
+      'Get baseline blood sugar screening and monitor regularly',
+      'Work with a healthcare provider or dietitian for personalized prevention strategies'
+    ],
+    detailedRecommendations: [
+      'Set achievable weight loss goals (aim for 5-7% initial weight loss)',
+      'Focus on whole, minimally processed foods',
+      'Choose complex carbohydrates and limit refined sugars and white flour products',
+      'Fill half your plate with non-starchy vegetables',
+      'Include lean proteins and healthy fats at meals',
+      'Eliminate or reduce sugary beverages',
+      'Build a consistent exercise routine combining cardio and strength training',
+      'Get adequate sleep and manage stress for metabolic health',
+      'Learn about diabetes symptoms and risk factors',
+      'Schedule regular check-ups and blood sugar screenings (every 1-3 years)'
+    ]
+  },
+
+  // Family History + Normal Weight
+  {
+    id: 'diabetes-family-history-normal',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'family-history',
+      'weight-status-diabetes': 'maintain'
+    },
+    priority: 'low',
+    summary: 'You have a family history of diabetes but maintain a healthy weight. While weight is a major risk factor, genetics also play a role in diabetes development. Focus on maintaining your healthy lifestyle, eating balanced meals, staying active, and monitoring your blood sugar periodically to catch any changes early.',
+    recommendations: [
+      'Maintain your healthy weight through balanced nutrition and regular activity',
+      'Focus on blood sugar-friendly eating patterns for prevention',
+      'Stay physically active to maintain insulin sensitivity',
+      'Get baseline blood sugar screening and periodic monitoring',
+      'Learn about diabetes symptoms and when to seek medical attention'
+    ],
+    detailedRecommendations: [
+      'Continue eating a balanced diet with whole grains, lean proteins, vegetables, and healthy fats',
+      'Limit refined carbohydrates and added sugars even at a healthy weight',
+      'Choose low to moderate glycemic index foods',
+      'Stay active with at least 150 minutes of moderate exercise weekly',
+      'Maintain good sleep habits (7-9 hours nightly)',
+      'Manage stress through healthy coping mechanisms',
+      'Avoid smoking and limit alcohol consumption',
+      'Stay informed about diabetes prevention and your family health history',
+      'Get blood sugar screenings every 1-3 years or as recommended',
+      'Report any diabetes symptoms (increased thirst, frequent urination, fatigue) to your doctor'
+    ]
+  },
+
+  // ========================================
+  // NOT SURE / NEEDS CLARIFICATION
+  // ========================================
+  
+  {
+    id: 'diabetes-not-sure',
+    conditions: {
+      conditions: 'diabetes',
+      'diabetes-status': 'not-sure'
+    },
+    priority: 'medium',
+    summary: 'You\'re uncertain about your diabetes status, which makes it important to first clarify your diagnosis with a healthcare provider. Whether you have diabetes, prediabetes, or are at risk, getting a clear understanding of your blood sugar status will help you receive appropriate nutrition guidance and medical care.',
+    recommendations: [
+      'Schedule an appointment with your healthcare provider to clarify your diabetes status',
+      'Get blood sugar testing (fasting glucose, A1C, or glucose tolerance test)',
+      'Bring any previous lab results or medical records to your appointment',
+      'Meanwhile, focus on general healthy eating principles that support blood sugar',
+      'Once diagnosed, work with a registered dietitian for condition-specific nutrition guidance'
+    ],
+    detailedRecommendations: [
+      'Request blood tests to determine if you have diabetes, prediabetes, or normal blood sugar',
+      'Discuss your symptoms, family history, and health concerns with your doctor',
+      'While awaiting clarification, follow general healthy eating guidelines',
+      'Choose whole, minimally processed foods',
+      'Include vegetables, fruits, whole grains, lean proteins, and healthy fats',
+      'Limit refined carbohydrates, added sugars, and sugary beverages',
+      'Practice portion control and regular meal timing',
+      'Stay physically active most days of the week',
+      'Once your status is clarified, seek diabetes education and nutrition counseling',
+      'Learn about your specific type of diabetes and appropriate management strategies'
+    ]
+  }
+];
+
+// Merge generated and legacy recommendations
+diabetesRecommendations.push(...legacyRecommendations);
+
+console.log(`✅ Generated ${diabetesRecommendations.length} diabetes recommendation scenarios`);
+
+// Export diabetes-specific utility functions
+export const getDiabetesRecommendation = (answers: any): RecommendationRule | null => {
+  // Find matching recommendation based on answers
+  for (const rule of diabetesRecommendations) {
+    let matches = true;
+    for (const [key, value] of Object.entries(rule.conditions)) {
+      if (answers[key] !== value) {
+        matches = false;
+        break;
+      }
+    }
+    if (matches) return rule;
+  }
+  return null;
+};

@@ -1,0 +1,28 @@
+Q No.	Category	Questions	Options	Rationale
+NOw these are the next set of questions to add
+
+
+4 Health conditions/concerns	
+
+Have you been diagnosed with, are currently being treated for, or have been told by a healthcare provider that you are at increased risk for any of the following conditions? (Please select all that apply)	
+1. Diabetes
+2. High blood pressure (hypertension)
+3. High cholesterol or other lip disorders
+4. Polycystic ovary syndrome (PCOS)
+5. Weight loss
+6. None of the above or prefer not to answer"	
+
+age affects recommendations — e.g. older adults may have different nutritional needs or targets. If under 18, certain adult guidelines (like weight loss targets) might not apply; pediatric guidance would be needed.
+
+NOTE: If pregnanacy was secleted earlier then weight loss should not be shown as an option here. in the third question about pregnancy status it was mentioned that if the person is pregnant or breastfeeding weight loss should not be shown as an option
+				
+
+
+				
+NOTE: This is only applicable if “None of the above” or “prefer not to answer” is selected				
+
+4a	Health and Wellness Goals	
+
+What is your primary health and wellness goal at this time? (Please select one)	
+1. Weight loss
+2. General healthy eating guidance"	

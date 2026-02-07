@@ -1,0 +1,160 @@
+This question category shoudl show up if the users selcets --"Polycystic ovary syndrome (PCOS)" in health condistions`
+
+
+PCOS status	
+What is your main health goal related to PCOS?	
+a. Weight management: I need to lose weight or manage my weight with PCOS.
+b. Fertility: “I am trying to improve my fertility/trying to conceive.
+c. Symptom control: Managing PCOS symptoms (like irregular periods, acne, excessive hair).
+d. Prediabetes/Insulin: I’m concerned about insulin resistance or prediabetes with PCOS.
+e. Not sure/All of the above"		
+
+
+
+IF option a. is selected then show the next question about weight status... that is this question below
+
+6	Weight status (only if option a. is selected)	
+What is your current BMI or weight status?	
+a. Normal weight
+b. Overweight (BMI 25-29)
+c. Obese (BMI 30 or above)
+d. Not sure
+
+NOTE: take note of all these for recomedation and results
+While PCOS can occur in women of all sizes (there is “lean PCOS”), a majority have overweight or obesity. 
+
+Weight loss will be a key recommendation for those above healthy weight. If someone with PCOS is already normal weight, the advice will focus more on diet composition, exercise, and possibly medication/supplements rather than weight loss	
+					
+					
+                    
+Recommendations logic for results and Recommendations
+
+Detailed recommendation
+- Weight Management	If	18-39; Female; pregnancy:Yes; PCOS; weight management; Normal weight	
+
+- Weight Management	If	18-39; Female; pregnancy:Yes; PCOS; weight management; Overweight			
+
+- Weight Management	If	18-39; Female; pregnancy:Yes; PCOS; weight management; Obese			
+
+-Weight Management	If	18-39; Female; pregnancy:Yes; PCOS; weight management; Not sure			
+
+- Weight Management	If	40-59; Female; pregnancy:Yes; PCOS; weight management; Normal weight			
+
+-Weight Management	If	40-59; Female; pregnancy:Yes; PCOS; weight management; Overweight			
+
+-Weight Management	If	40-59; Female; pregnancy:Yes; PCOS; weight management; Obese			
+
+-Weight Management	If	40-59; Female; pregnancy:Yes; PCOS; weight management; Not sure			
+
+-Weight Management	If	18-39; Female; pregnancy:No; PCOS; weight management; Normal weight			
+
+-Weight Management	If	18-39; Female; pregnancy:No; PCOS; weight management; Overweight			
+
+-Weight Management	If	18-39; Female; pregnancy:No; PCOS; weight management; Obese			
+
+-Weight Management	If	18-39; Female; pregnancy:No; PCOS; weight management; Not sure			
+
+-Weight Management	If	40-59; Female; pregnancy:No; PCOS; weight management; Normal weight			
+
+-Weight Management	If	40-59; Female; pregnancy:No; PCOS; weight management; Overweight			
+
+-Weight Management	If	40-59; Female; pregnancy:No; PCOS; weight management; Obese			
+
+-Weight Management	If	40-59; Female; pregnancy:No; PCOS; weight management; Not sure			
+
+-Fertility	If	18-39; Female; pregnancy:Yes; PCOS; Fertility; Normal weight			
+
+-Fertility	If	18-39; Female; pregnancy:Yes; PCOS; Fertility; Overweight			
+
+-Fertility	If	18-39; Female; pregnancy:Yes; PCOS; Fertility; Obese			
+
+-Fertility	If	18-39; Female; pregnancy:Yes; PCOS; Fertility; Not sure			
+
+-Fertility	If	40-59; Female; pregnancy:Yes; PCOS; Fertility; Normal weight			
+
+-Fertility	If	40-59; Female; pregnancy:Yes; PCOS; Fertility; Overweight			
+
+-Fertility	If	40-59; Female; pregnancy:Yes; PCOS; Fertility; Obese			
+
+-Fertility	If	40-59; Female; pregnancy:Yes; PCOS; Fertility; Not sure			
+
+-Fertility	If	18-39; Female; pregnancy:No; PCOS; Fertility; Normal weight			
+
+-Fertility	If	18-39; Female; pregnancy:No; PCOS; Fertility; Overweight			
+
+-Fertility	If	18-39; Female; pregnancy:No; PCOS; Fertility; Obese			
+
+-Fertility	If	18-39; Female; pregnancy:No; PCOS; Fertility; Not sure			
+
+-Fertility	If	40-59; Female; pregnancy:No; PCOS; Fertility; Normal weight			
+
+-Fertility	If	40-59; Female; pregnancy:No; PCOS; Fertility; Overweight			
+
+-Fertility	If	40-59; Female; pregnancy:No; PCOS; Fertility; Obese			
+
+-Fertility	If	40-59; Female; pregnancy:No; PCOS; Fertility; Not sure			
+
+-Symptom Control	If	18-39; Female; pregnancy:Yes; PCOS; Symptom Control; Normal weight			
+
+-Symptom Control	If	18-39; Female; pregnancy:Yes; PCOS; 
+Symptom Control; Overweight			
+
+-Symptom Control	If	18-39; Female; pregnancy:Yes; PCOS; Symptom Control; Obese			
+
+-Symptom Control	If	18-39; Female; pregnancy:Yes; PCOS; Symptom Control; Not sure			
+
+-Symptom Control	If	40-59; Female; pregnancy:Yes; PCOS; Symptom Control; Normal weight			
+
+-Symptom Control	If	40-59; Female; pregnancy:Yes; PCOS; Symptom Control; Overweight			
+
+-Symptom Control	If	40-59; Female; pregnancy:Yes; PCOS; Symptom Control; Obese			
+
+-Symptom Control	If	40-59; Female; pregnancy:Yes; PCOS; Symptom Control; Not sure			
+
+-Symptom Control	If	18-39; Female; pregnancy:No; PCOS; Symptom Control; Normal weight			
+
+-Symptom Control	If	18-39; Female; pregnancy:No; PCOS; Symptom Control; Overweight			
+
+-Symptom Control	If	18-39; Female; pregnancy:No; PCOS; Symptom Control; Obese			
+
+-Symptom Control	If	18-39; Female; pregnancy:No; PCOS; Symptom Control; Not sure			
+
+-Symptom Control	If	40-59; Female; pregnancy:No; PCOS; Symptom Control; Normal weight			
+
+-Symptom Control	If	40-59; Female; pregnancy:No; PCOS; Symptom Control; Overweight			
+
+-Symptom Control	If	40-59; Female; pregnancy:No; PCOS; Symptom Control; Obese			
+
+-Symptom Control	If	40-59; Female; pregnancy:No; PCOS; Symptom Control; Not sure			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Normal weight			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Overweight			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Obese			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Not sure			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Normal weight			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Overweight			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Obese			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:Yes; PCOS; Prediabetes/Insulin; Not sure			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Normal weight			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Overweight			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Obese			
+
+-Prediabetes/Insulin	If	18-39; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Not sure			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Normal weight			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Overweight			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Obese			
+
+-Prediabetes/Insulin	If	40-59; Female; pregnancy:No; PCOS; Prediabetes/Insulin; Not sure			

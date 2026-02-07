@@ -1,0 +1,231 @@
+options from health conditions:
+1. Diabetes
+2. High blood pressure (hypertension)
+3. High cholesterol or other lip disorders
+4. Polycystic ovary syndrome (PCOS)
+5. Weight loss
+6. None of the above or prefer not to answer"	
+
+in health condition if the person select "Weight loss" then show questions form this category...continued from changes2.txt
+
+Weight Loss Goal	
+How much weight are you looking to lose?	
+a. “Just a little (5–10 lbs / 2–5 kg).” (This might be someone close to goal weight wanting to trim down or improve tone.)
+b. “A moderate amount (10–20 lbs / ~5–10 kg).”
+c. “A significant amount (over 20 lbs / over 10 kg).”
+d. “Not sure, I just want to get healthier/slimmer.”"	
+
+NOTE: for results and recomedations also
+This quantifies the goal intensity. Larger weight loss goals may require more structured or longer-term interventions, and also the tool can emphasize setting small milestones (like 5-10% of body weight at a time). 
+If someone just has a small goal, suggestions might focus on minor tweaks; for a large goal, emphasize sustainability and possibly medical supervision if very high	
+
+
+6	Past Attempts or Challenges	
+Have you tried losing weight before, and if so, what has been your biggest challenge?	
+a. Yes, I have trouble with my diet (I love sweets/carbs or eat too much).
+b. Yes, I have trouble being consistent with exercise.
+c. Yes, I lose motivation or regain the weight.
+d. No, I haven’t seriously tried before.
+e. Other (e.g. medical condition that makes it hard)."	
+
+NOTE:For resulst and recoemdation
+Knowing the obstacle (diet vs exercise vs adherence) can tailor the emphasis in advice (e.g., if diet is the problem, focus on calorie control methods and meal planning; if consistency is an issue, focus on habit formation tips)	
+					
+					
+Summarized recommendation will be displayed after assessment. But the user will be required to put their email to receive a more detailed recommendation	Summarized recommendation	Sent to user as email					
+Recommendations logic ad for results too					
+
+Detailed recommendation
+
+-Just a little	If	18 - 39; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble with my diet	
+
+
+-Just a little	If	18 - 39; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble being consistent			
+
+-Just a little	If	18 - 39; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I lose motivation			
+
+-Just a little	If	18 - 39; Female; Weightloss; Weight loss goal: Just a little; Past attempts: No, I haven't seriously tried			
+
+-Just a little	If	18 - 39; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble with my diet			
+
+-Just a little	If	18 - 39; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble being consistent			
+
+-Just a little	If	18 - 39; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I lose motivation			
+
+-Just a little	If	18 - 39; Male; Weightloss; Weight loss goal: Just a little; Past attempts: No, I haven't seriously tried			
+
+-Just a little	If	40 - 59; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble with my diet			
+
+-Just a little	If	40 - 59; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble being consistent			
+
+-Just a little	If	40 - 59; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I lose motivation			
+
+-Just a little	If	40 - 59; Female; Weightloss; Weight loss goal: Just a little; Past attempts: No, I haven't seriously tried			
+
+-Just a little	If	40 - 59; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble with my diet			
+
+-Just a little	If	40 - 59; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble being consistent			
+
+-Just a little	If	40 - 59; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I lose motivation			
+
+-Just a little	If	40 - 59; Male; Weightloss; Weight loss goal: Just a little; Past attempts: No, I haven't seriously tried			
+
+-Just a little	If	60 or above; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble with my diet			
+
+-Just a little	If	60 or above; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble being consistent			
+
+-Just a little	If	60 or above; Female; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I lose motivation			
+
+-Just a little	If	60 or above; Female; Weightloss; Weight loss goal: Just a little; Past attempts: No, I haven't seriously tried			
+
+-Just a little	If	60 or above; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble with my diet			
+
+-Just a little	If	60 or above; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I have trouble being consistent			
+
+-Just a little	If	60 or above; Male; Weightloss; Weight loss goal: Just a little; Past attempts: Yes, I lose motivation			
+
+-Just a little	If	60 or above; Male; Weightloss; Weight loss goal: Just a little; Past attempts: No, I haven't seriously tried			
+
+-A moderate amount	If	18 - 39; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble with my diet			
+
+-A moderate amount	If	18 - 39; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble being consistent			
+
+-A moderate amount	If	18 - 39; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I lose motivation			
+
+-A moderate amount	If	18 - 39; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: No, I haven't seriously tried			
+
+-A moderate amount	If	18 - 39; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble with my diet			
+
+-A moderate amount	If	18 - 39; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble being consistent			
+
+-A moderate amount	If	18 - 39; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I lose motivation			
+
+-A moderate amount	If	18 - 39; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: No, I haven't seriously tried			
+
+-A moderate amount	If	40 - 59; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble with my diet			
+
+-A moderate amount	If	40 - 59; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble being consistent			
+
+-A moderate amount	If	40 - 59; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I lose motivation			
+
+-A moderate amount	If	40 - 59; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: No, I haven't seriously tried			
+
+-A moderate amount	If	40 - 59; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble with my diet			
+
+-A moderate amount	If	40 - 59; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble being consistent			
+
+-A moderate amount	If	40 - 59; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I lose motivation			
+
+-A moderate amount	If	40 - 59; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: No, I haven't seriously tried			
+
+-A moderate amount	If	60 or above; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble with my diet			
+
+-A moderate amount	If	60 or above; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble being consistent			
+
+-A moderate amount	If	60 or above; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I lose motivation			
+
+-A moderate amount	If	60 or above; Female; Weightloss; Weight loss goal: A moderate amount; Past attempts: No, I haven't seriously tried			
+
+-A moderate amount	If	60 or above; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble with my diet			
+
+-A moderate amount	If	60 or above; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I have trouble being consistent			
+
+-A moderate amount	If	60 or above; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: Yes, I lose motivation			
+
+-A moderate amount	If	60 or above; Male; Weightloss; Weight loss goal: A moderate amount; Past attempts: No, I haven't seriously tried			
+
+-A significant amount	If	18 - 39; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble with my diet			
+
+-A significant amount	If	18 - 39; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble being consistent			
+
+-A significant amount	If	18 - 39; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I lose motivation			
+
+-A significant amount	If	18 - 39; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: No, I haven't seriously tried			
+
+-A significant amount	If	18 - 39; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble with my diet			
+
+-A significant amount	If	18 - 39; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble being consistent			
+
+-A significant amount	If	18 - 39; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I lose motivation			
+
+-A significant amount	If	18 - 39; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: No, I haven't seriously tried			
+
+-A significant amount	If	40 - 59; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble with my diet			
+
+-A significant amount	If	40 - 59; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble being consistent			
+
+-A significant amount	If	40 - 59; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I lose motivation			
+
+-A significant amount	If	40 - 59; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: No, I haven't seriously tried			
+
+-A significant amount	If	40 - 59; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble with my diet			
+
+-A significant amount	If	40 - 59; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble being consistent			
+
+-A significant amount	If	40 - 59; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I lose motivation			
+
+-A significant amount	If	40 - 59; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: No, I haven't seriously tried			
+
+-A significant amount	If	60 or above; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble with my diet			
+
+-A significant amount	If	60 or above; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble being consistent			
+
+-A significant amount	If	60 or above; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I lose motivation			
+
+-A significant amount	If	60 or above; Female; Weightloss; Weight loss goal: A significant amount; Past attempts: No, I haven't seriously tried			
+
+-A significant amount	If	60 or above; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble with my diet			
+
+-A significant amount	If	60 or above; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I have trouble being consistent			
+
+-A significant amount	If	60 or above; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: Yes, I lose motivation			
+
+-A significant amount	If	60 or above; Male; Weightloss; Weight loss goal: A significant amount; Past attempts: No, I haven't seriously tried			
+
+-Not Sure	If	18 - 39; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble with my diet			
+
+-Not Sure	If	18 - 39; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble being consistent			
+
+-Not Sure	If	18 - 39; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I lose motivation			
+
+-Not Sure	If	18 - 39; Female; Weightloss; Weight loss goal: Not sure; Past attempts: No, I haven't seriously tried			
+
+-Not Sure	If	18 - 39; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble with my diet			
+
+-Not Sure	If	18 - 39; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble being consistent			
+
+-Not Sure	If	18 - 39; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I lose motivation			
+
+-Not Sure	If	18 - 39; Male; Weightloss; Weight loss goal: Not sure; Past attempts: No, I haven't seriously tried			
+
+-Not Sure	If	40 - 59; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble with my diet			
+
+-Not Sure	If	40 - 59; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble being consistent			
+
+-Not Sure	If	40 - 59; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I lose motivation			
+
+-Not Sure	If	40 - 59; Female; Weightloss; Weight loss goal: Not sure; Past attempts: No, I haven't seriously tried			
+
+-Not Sure	If	40 - 59; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble with my diet			
+
+-Not Sure	If	40 - 59; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble being consistent			
+
+-Not Sure	If	40 - 59; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I lose motivation			
+
+-Not Sure	If	40 - 59; Male; Weightloss; Weight loss goal: Not sure; Past attempts: No, I haven't seriously tried			
+
+-Not Sure	If	60 or above; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble with my diet			
+
+-Not Sure	If	60 or above; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble being consistent			
+
+-Not Sure	If	60 or above; Female; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I lose motivation			
+
+-Not Sure	If	60 or above; Female; Weightloss; Weight loss goal: Not sure; Past attempts: No, I haven't seriously tried			
+
+-Not Sure	If	60 or above; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble with my diet			
+
+-Not Sure	If	60 or above; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I have trouble being consistent			
+
+-Not Sure	If	60 or above; Male; Weightloss; Weight loss goal: Not sure; Past attempts: Yes, I lose motivation			
+
+-Not Sure	If	60 or above; Male; Weightloss; Weight loss goal: Not sure; Past attempts: No, I haven't seriously tried			

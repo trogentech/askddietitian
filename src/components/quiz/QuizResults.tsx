@@ -151,18 +151,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
         </div>
       )}
 
-      {/* Blood Pressure Badge */}
-      {result.bloodPressure && (
-        <div className='flex justify-center mb-6'>
-          <span
-            className={`px-4 py-2 rounded-full text-sm font-semibold border ${getBloodPressureColor(
-              result.bloodPressure
-            )}`}
-          >
-            {getBloodPressureName(result.bloodPressure)}
-          </span>
-        </div>
-      )}
+       {/* Blood pressure field removed as it was not in changes4.txt */}
 
       {/* Priority Badge */}
       <div className='flex justify-center mb-6'>
@@ -223,12 +212,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
                 {result.personalizedFactors.pcosWeightStatus.replace('-', ' ')}
               </div>
             )}
-            {result.personalizedFactors.bloodPressure && (
-              <div>
-                <strong>Blood Pressure:</strong>{' '}
-                {result.personalizedFactors.bloodPressure.replace('-', ' ')}
-              </div>
-            )}
+            {/* Blood pressure references removed - field not in changes4.txt */}
           </div>
         </div>
       )}

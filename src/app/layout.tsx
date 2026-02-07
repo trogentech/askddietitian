@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/homepage/navigation/page";
 import NutritionPage from "@/components/homepage/nutrition-ui/nutrition-ui";
 import Footer from "@/components/homepage/footer/footer";
+import favicon from "./favicon.ico";
 
 const font = Lato({
   weight: ['100', '300', '400', '700', '900'],
@@ -14,6 +15,9 @@ const font = Lato({
 export const metadata: Metadata = {
   title: "askddietician",
   description: "Ask the dietician web app Product made with nextjs and tailwind v4",
+  icons: {
+    icon: favicon.src,
+  },
 };
 
 export default function RootLayout({

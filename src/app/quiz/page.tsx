@@ -15,9 +15,12 @@ const QuizPage = () => {
   const [quizResult, setQuizResult] = useState<any>(null);
 
   const filteredSteps = getFilteredSteps(answers);
-  const currentStep = filteredSteps[currentStepIndex];
-  const isFirstStep = currentStepIndex === 0;
-  const isLastStep = currentStepIndex === filteredSteps.length - 1;
+  
+  // Ensure currentStepIndex is always valid
+  const validStepIndex = Math.min(currentStepIndex, filteredSteps.length - 1);
+  const currentStep = filteredSteps[validStepIndex];
+  const isFirstStep = validStepIndex === 0;
+  const isLastStep = validStepIndex === filteredSteps.length - 1;
 
   // Check if current step is a followup step that should end the quiz
   const isFollowupLastStep =
@@ -52,7 +55,7 @@ const QuizPage = () => {
       behavior: 'smooth',
     });
     if (!isLastStep) {
-      setCurrentStepIndex(currentStepIndex + 1);
+      setCurrentStepIndex(validStepIndex + 1);
     }
   };
 
@@ -62,7 +65,7 @@ const QuizPage = () => {
       behavior: 'smooth',
     });
     if (!isFirstStep) {
-      setCurrentStepIndex(currentStepIndex - 1);
+      setCurrentStepIndex(validStepIndex - 1);
     }
   };
 
@@ -98,15 +101,32 @@ const QuizPage = () => {
   const canProceed = () => {
     if (!currentStep) return false;
 
-    return currentStep.questions.every((question) => {
-      if (!question.required) return true;
+    return currentStep.questions
+      .filter((question) => {
+        // Only validate questions that should be shown based on conditions
+        if (question.condition) {
+          if (typeof question.condition === 'function') {
+            return question.condition(answers);
+          } else {
+            const condition = question.condition as { field: string; value: string | string[] };
+            const { field, value } = condition;
+            if (Array.isArray(value)) {
+              return value.includes(answers[field] as string);
+            }
+            return answers[field] === value;
+          }
+        }
+        return true;
+      })
+      .every((question) => {
+        if (!question.required) return true;
 
-      const answer = answers[question.id];
-      if (question.type === 'multiple') {
-        return Array.isArray(answer) && answer.length > 0;
-      }
-      return typeof answer === 'string' && answer.trim() !== '';
-    });
+        const answer = answers[question.id];
+        if (question.type === 'multiple') {
+          return Array.isArray(answer) && answer.length > 0;
+        }
+        return typeof answer === 'string' && answer.trim() !== '';
+      });
   };
 
   if (showResults && quizResult) {
@@ -153,7 +173,7 @@ const QuizPage = () => {
 
         {/* Progress Indicator */}
         <QuizProgress
-          currentStep={currentStepIndex}
+          currentStep={validStepIndex}
           totalSteps={filteredSteps.length}
         />
 

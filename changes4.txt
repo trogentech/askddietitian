@@ -1,0 +1,270 @@
+                                                                                                                                                                                                                                                                                                        No.	Category	Questions	Options	Rationale	
+
+Blood Pressure Management Questions
+					
+6	Current Management	
+Are you currently on blood pressure medication?	
+1. Yes (on one or more medicaitons)
+2. No (managing without medication)"	
+
+
+NOTE: for the results and recommendation logi that comes after the persn submits thise sectin.
+
+if Yes, recommendations will still emphasize lifestyle (since it complements medication), but may also encourage adherence to meds and possibly ask if the user has side effects that lifestyle might minimize. 
+
+If No, it suggests either a milder case or a preference to manage with diet/exercise – the tool will then stress lifestyle as primary therapy. This question helps tailor the tone: e.g., for someone on meds, “These diet changes will work along with your medication to better control BP, and might even reduce your needed dosage over time,” whereas someone not on meds might hear, “These changes can lower your BP and might help you avoid needing medication."	
+					
+					
+
+
+
+7	Weight Status	
+Are you overweight or obese? (BMI or a general sense, e.g., “Has your doctor suggested you lose weight?”)	
+a. Yes
+b. No"	
+
+Weight loss is one of the most effective ways to reduce blood pressure in those who are overweight. If Yes, recommendations will include weight reduction as a goal (even modest weight loss can lower BP). If No (weight is healthy), the focus will stay on diet composition and exercise.	
+
+
+
+8	Other Factors	
+Do you have any of the following related conditions? (user can select multiple or none)	
+a. Diabetes
+b. Kidney disease
+c. High Cholesterol
+d. None of the above	
+
+
+NOTE: take note of these for results and recomedation:
+Co-existing conditions can influence blood pressure goals. For example, if the user also has diabetes or kidney disease, guidelines often recommend an even lower blood pressure target and stricter sodium limit. If they have such conditions, the advice might be tailored to address combined dietary needs (e.g., a diabetic with hypertension should follow a combination of blood-sugar-friendly and BP-friendly diet, which actually overlap significantly). 
+If cholesterol is also high, a heart-healthy diet becomes paramount, which again overlaps with BP advice. This multi-select question ensures the recommendations can be integrated if needed — however, if the tool is meant to handle one condition at a time, this could be optional. It might simply be used to mention relevant cross-benefits, like “The diet we recommend will also help with your cholesterol.	
+					
+
+NOTE: Other factors: Diabetes	Summarized recommendation will be displayed after assessment. But the user will be required to put their email to receive a more detailed recommendation	Summarized recommendation	Sent to user as email
+
+
+Recommendations logic					
+Category	Statement	Condtions	Note	Recommendation	Detailed recommendation
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; 
+
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Kidney disease			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: High Cholesterol			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: None			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Diabetes			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Kidney disease			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: High Cholesterol			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: None			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Diabetes			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Kidney disease			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: High Cholesterol			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: None			
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Diabetes			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Kidney disease			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: High Cholesterol			
+
+- HBP Medication: Yes	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: None			
+
+ HBP Medication: Yes	If	18-39; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Diabetes			
+
+- HBP Medication: Yes	If	18-39; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Kidney disease			
+
+- HBP Medication: Yes	If	18-39; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: High Cholesterol			
+
+- HBP Medication: Yes	If	18-39; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: None			
+
+- HBP Medication: Yes	If	18-39; Male;  High Blood Pre- ssure; Medication: Yes; Weight status: No; Other factors: Diabetes			
+- HBP Medication: Yes	If	18-39; Male;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Kidney disease			
+
+- HBP Medication: Yes	If	18-39; Male;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	18-39; Male;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: None			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: None			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: None			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Kidney disease			
+
+- HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: High Cholesterol			
+
+- HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: None			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: Yes; Weight status: No; Other factors: None			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: None			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	40-59; Male;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: None			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: Yes; Other factors: None			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: Yes	If	60 or above; Female;  High Blood Pressure; Medication: Yes; Weight status: No; Other factors: None			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: None			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: None			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: None			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	18-39; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: None			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: None			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	18-39; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: None			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: None			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:Yes; High Blood Pressure; Medication: No; Weight status: No; Other factors: None			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: Yes; Other factors: None			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	40-59; Female; pregnancy:No; High Blood Pressure; Medication: No; Weight status: No; Other factors: None			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: None			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	40-59; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: None			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Diabetes			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: Kidney disease			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: Yes; Other factors: None			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: Diabetes			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: Kidney disease			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: High Cholesterol			
+
+-HBP Medication: No	If	60 or above; Male;  High Blood Pressure; Medication: No; Weight status: No; Other factors: None			
+					

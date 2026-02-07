@@ -1,0 +1,32 @@
+ CRITICAL QUESTION 1: For the Blood Pressure conditions (changes4.txt), I noticed the quiz currently asks about:
+
+ • Blood pressure level (pre-hypertension, stage 1, stage 2, not sure)
+ • Medication status
+ • Salt intake
+ • Weight status
+ • Other conditions
+
+But the recommendation patterns in changes4.txt ONLY use:
+
+ • Medication status (Yes/No)
+ • Weight status (Yes/No)
+ • Other factors (Diabetes, Kidney disease, High Cholesterol, None)
+
+The patterns DON'T include blood pressure level or salt intake. Should I:
+
+ • Option A: Generate recommendations that consider ALL the quiz answers (including BP level and salt intake) even
+   though the patterns don't show them?
+
+🔴 CRITICAL QUESTION 2: The recommendation structure - should I create:
+
+ • Short summary (but make it detailed based on what is in the file ot more than what is in the files you are getting the recomendation and resulst from)(4-5 sentences) for the results page display?
+ NOTE: Detailed recommendation is for email.. and for that one a pdf will be sent to them so 
+
+
+🔴 CRITICAL QUESTION 3: For priority levels, should I use this logic:
+
+ • HIGH priority: Pregnancy + any condition, Multiple risk factors, Stage 2 hypertension, Type 1 diabetes
+ • MEDIUM priority: Single condition with risk factors, Type 2 diabetes, Prediabetes with obesity
+ • LOW priority: Preventive (family history), weight loss goals without medical conditions
+
+Is this correct, or do you have different priority rules? i like that logic but I want to make sure it aligns with your vision for the app and the urgency of the recommendations.

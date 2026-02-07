@@ -1,0 +1,47 @@
+
+
+The main category for this questuion is
+General Information
+Let's start with some basic information about you
+
+
+Age
+
+1. What is your age group?	
+1. 18 - 39
+2. 40 - 59
+3. 60 or above"	
+
+age affects recommendations — e.g. older adults may have different nutritional needs or targets. If under 18, certain adult guidelines (like weight loss targets) might not apply; pediatric guidance would be needed.
+
+
+
+2	Gender	What is your sex assigned at birth or gender?	
+1. Female
+2. Male
+ 
+Gender influences some risk factors and recommendations. For example, PCOS applies only to females; iron needs differ by sex; pregnancy considerations apply to females of childbearing age
+
+NOTE: that means if male is selected you should not ask the third question about pregnancy. or if female is selcted but age is 60 or above you should not ask the third question about pregnancy.
+
+
+				
+This is only applicable if the age group is "18 - 39" or “40 - 59". It should not show if 60 or above is selected				
+
+
+
+
+abother porgress section
+Pregnancy Status
+This helps us provide appropriate recommendations
+
+3. Are you currently pregnant or breastfeeding?	
+1. Yes
+2. No	
+
+Certain conditions like weight loss or specific diets are approached differently during pregnancy. If Yes, weight-loss interventions would be not recommended — focus would shift to appropriate weight gain and balanced nutrition for pregnancy.
+
+NOTE: if the person is pregnanat of breast feeding then you are not supposed to show  "weight loss as parts of the options for the next set of questions"
+i am talking abut the nenxt questions which is in the category of "health condition"
+
+NOTE: it could have been implemnetd self... if that is the case good but if not implemnet...

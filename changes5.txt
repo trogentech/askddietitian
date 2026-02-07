@@ -1,0 +1,127 @@
+They should be reffred to this question when they select "High cholesterol or other lip disorders" in the health condition category
+
+5	Cholesterol Profile	
+Have you been told that you have high cholesterol?	
+a. Yes
+b. No	
+
+These options cover common dyslipidemias. The recommendations for each have overlaps (all will involve a heart-healthy diet and exercise), but with some nuances (for example, high triglycerides call for reducing sugar and alcohol, whereas low HDL might emphasize exercise and healthy fats). The tool can give combined advice if multiple issues exist.	
+
+
+
+6	Current weight or Other risk factors	
+Do you have any related conditions?	
+a. Overweight/Obesity
+b. Diabetes
+c. Family history of early heart disease
+d. Not sure"		
+
+
+					
+NOTE: for recomedation and results	section, Summarized recommendation will be displayed after assessment. But the user will be required to put their email to receive a more detailed recommendation	Summarized recommendation	Sent to user as email
+
+Recommendations logic					
+Category	Statement	Condtions	Note	Recommendation	Detailed recommendation
+
+Choles means Cholesterol
+- Choles 'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Overweight/Obesity	
+
+- Choles 'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Diabetes			
+
+- Choles 'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Family history			
+
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Not sure			
+
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Overweight/Obesity			
+
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	18 - 39; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	18 - 39; Male;  High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	18 - 39; Male;  High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	18 - 39; Male;  High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	18 - 39; Male;  High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	40 - 59; Female; pregnancy:No; High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	40 - 59; Male;  High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	40 - 59; Male;  High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	40 - 59; Male;  High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	40 - 59; Male;  High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	60 or above; Female;  High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	60 or above; Female;  High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	60 or above; Female;  High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	60 or above; Female;  High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: Yes	If	60 or above; Male;  High Cholesterol: Yes; Conditions: Overweight/Obesity			
+- Choles'Profile: Yes	If	60 or above; Male;  High Cholesterol: Yes; Conditions: Diabetes			
+- Choles'Profile: Yes	If	60 or above; Male;  High Cholesterol: Yes; Conditions: Family history			
+- Choles'Profile: Yes	If	60 or above; Male;  High Cholesterol: Yes; Conditions: Not sure			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	18 - 39; Female; pregnancy:No; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	18 - 39; Male;  High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	18 - 39; Male;  High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	18 - 39; Male;  High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	18 - 39; Male;  High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:Yes; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	40 - 59; Female; pregnancy:No; High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	40 - 59; Male;  High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	40 - 59; Male;  High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	40 - 59; Male;  High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	40 - 59; Male;  High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	60 or above; Female;  High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	60 or above; Female;  High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	60 or above; Female;  High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	60 or above; Female;  High Cholesterol: No; Conditions: Not sure			
+- Choles'Profile: No	If	60 or above; Male;  High Cholesterol: No; Conditions: Overweight/Obesity			
+- Choles'Profile: No	If	60 or above; Male;  High Cholesterol: No; Conditions: Diabetes			
+- Choles'Profile: No	If	60 or above; Male;  High Cholesterol: No; Conditions: Family history			
+- Choles'Profile: No	If	60 or above; Male;  High Cholesterol: No; Conditions: Not sure			

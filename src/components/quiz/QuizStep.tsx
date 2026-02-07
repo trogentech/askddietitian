@@ -38,10 +38,13 @@ const QuizStep: React.FC<QuizStepProps> = ({
               } else {
                 const condition = question.condition as { field: string; value: string | string[] };
                 const { field, value } = condition;
+                const fieldValue = answers[field];
                 if (Array.isArray(value)) {
-                  return value.includes(answers[field] as string);
+                  return Array.isArray(fieldValue)
+                    ? value.some(v => fieldValue.includes(v))
+                    : value.includes(fieldValue as string);
                 }
-                return answers[field] === value;
+                return fieldValue === value;
               }
             }
             return true;
@@ -64,8 +67,13 @@ const QuizStep: React.FC<QuizStepProps> = ({
                   {question.options
                     .filter((option) => {
                       if (option.condition) {
-                        const { field, value } = option.condition;
-                        return answers[field] === value;
+                        const condition = option.condition as { field: string; value: string };
+                        const { field, value } = condition;
+                        const fieldValue = answers[field];
+                        if (Array.isArray(fieldValue)) {
+                          return fieldValue.includes(value as string);
+                        }
+                        return fieldValue === value;
                       }
                       return true;
                     })

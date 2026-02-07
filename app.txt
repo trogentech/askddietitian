@@ -1,24 +1,14 @@
-Prediabetes	If	Under 18; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	Under 18; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	Under 18; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	Under 18; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	Under 18; Male; Prediabetes; Obese: Yes
-Prediabetes	If	Under 18; Male; Prediabetes; Obese: No
-Prediabetes	If	18 - 39; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	18 - 39; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	18 - 39; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	18 - 39; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	18 - 39; Male; Prediabetes; Obese: Yes
-Prediabetes	If	18 - 39; Male; Prediabetes; Obese: No
-Prediabetes	If	40 - 59; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	40 - 59; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	40 - 59; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	40 - 59; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	40 - 59; Male; Prediabetes; Obese: Yes
-Prediabetes	If	40 - 59; Male; Prediabetes; Obese: No
-Prediabetes	If	60 or above; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	60 or above; Female; pregnancy:Yes; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	60 or above; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: Yes
-Prediabetes	If	60 or above; Female; pregancy: No; Diabetes Status: Prediabetes; Obese: No
-Prediabetes	If	60 or above; Male; Prediabetes; Obese: Yes
-Prediabetes	If	60 or above; Male; Prediabetes; Obese: No
+ CRITICAL QUESTIONS I Need Answered:
+
+🔴 BLOCKER #1: The files show the PATTERNS/CONDITIONS (e.g., "IF: 18-39; Female; pregnancy:Yes; Diabetes:Type2;
+Weight:Yes") but WHERE IS THE ACTUAL RECOMMENDATION TEXT for each scenario? for diabetes etc use chnages3.txt (does that answer your question)
+
+ • Is there another document with the recommendation content? all i have is what i showeed you i mean form those txt files
+
+🔴 BLOCKER #2: Should health conditions be single selection (current) or multiple selection (allows selecting Diabetes
++ High BP + PCOS together)? --- single selcetion for now
+
+
+🔴 BLOCKER #4: Which implementation approach:
+
+ • Option B: Smart templating system (8-12 hrs) ⭐ ---- do the one by on, pick one options form the health condition and then do the recommendation and results for that one once you are done let me know i will check and then tell you to move to the next one, this way we can ensure the recommendations are accurate and well-crafted for each scenario.
