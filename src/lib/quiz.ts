@@ -43,7 +43,6 @@ export const quizData: QuizData = {
            type: 'single',
            required: true,
            options: [
-             { id: 'under-18', text: 'Under 18', value: 'under-18' },
              { id: '18-39', text: '18 - 39', value: '18-39' },
              { id: '40-59', text: '40 - 59', value: '40-59' },
              { id: '60-above', text: '60 or above', value: '60-above' }
@@ -372,9 +371,7 @@ export const quizData: QuizData = {
            },
            options: [
              { id: 'weight-loss', text: 'Weight loss', value: 'weight-loss' },
-             { id: 'weight-gain', text: 'Weight gain', value: 'weight-gain' },
              { id: 'general-healthy-eating', text: 'General healthy eating guidance', value: 'general-healthy-eating' },
-             { id: 'weight-maintenance', text: 'Weight maintenance', value: 'weight-maintenance' }
            ]
          }
        ]
@@ -434,7 +431,7 @@ export const getFilteredSteps = (answers: QuizAnswers): QuizStep[] => {
     return quizData.steps.filter(step => {
       // Filter out pregnancy step for non-females or under 18
       if (step.id === 'pregnancy') {
-        return answers.gender === 'female' && answers.age !== 'under-18';
+        return answers.gender === 'female';
       }
 
       // Filter out diabetes followup if diabetes not selected
@@ -647,19 +644,7 @@ function getFallbackRecommendation(answers: QuizAnswers): QuizResult {
   let priority: 'high' | 'medium' | 'low' = 'low';
 
   // Age-based customizations
-  if (age === 'under-18') {
-    title = 'Youth Health & Wellness';
-    summary = 'Focus on nutritional needs for growth and development. Pediatric guidelines should be followed for optimal health.';
-    recommendations = [
-      'Follow pediatric nutritional guidelines for growth',
-      'Ensure adequate intake of calcium and vitamin D for bone development',
-      'Include iron-rich foods for cognitive development',
-      'Limit sugary drinks and processed foods',
-      'Encourage healthy eating habits from a young age',
-      'Stay physically active with age-appropriate activities'
-    ];
-    priority = 'medium';
-  } else if (age === '60-above') {
+  if (age === '60-above') {
     title = 'Senior Health & Wellness';
     summary = 'Older adults have different nutritional needs. Focus on maintaining health and preventing age-related conditions.';
     recommendations = [
@@ -690,12 +675,12 @@ function getFallbackRecommendation(answers: QuizAnswers): QuizResult {
   } else {
     // Gender-based customizations (only if not pregnant)
     if (gender === 'female') {
-      if (age !== 'under-18' && age !== '60-above') {
+      if ( age !== '60-above') {
         recommendations.push('Ensure adequate iron intake, especially if menstruating');
         recommendations.push('Consider calcium and vitamin D needs for bone health');
       }
     } else if (gender === 'male') {
-      if (age !== 'under-18' && age !== '60-above') {
+      if (age !== '60-above') {
         recommendations.push('Ensure adequate zinc and vitamin D intake');
         recommendations.push('Focus on heart-healthy eating patterns');
       }
