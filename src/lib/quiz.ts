@@ -18,6 +18,8 @@ export interface QuizQuestion {
    } | ((answers: QuizAnswers) => boolean);
  }
 
+//  new
+
 export interface QuizStep {
   id: string;
   title: string;
