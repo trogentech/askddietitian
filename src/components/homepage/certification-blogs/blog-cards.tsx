@@ -14,8 +14,10 @@ interface BlogCardProps {
 
 const BlogCards: React.FC<BlogCardProps> = ({ image, title, description, date, readTime }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden  w-full max-w-md">
-      <Image src={image} alt={title} width={400} height={200} className="w-full h-48 object-cover" />
+    <div className="card-hover bg-white rounded-lg shadow-md overflow-hidden w-full max-w-md">
+      <div className="overflow-hidden">
+        <Image src={image} alt={title} width={400} height={200} className="img-zoom w-full h-48 object-cover" />
+      </div>
       
       <div className="p-4 text-left">
         <h3 className="font-medium  mb-2">{title}</h3>
@@ -32,7 +34,7 @@ const BlogCards: React.FC<BlogCardProps> = ({ image, title, description, date, r
           </div>
         </div>
          <Link href={"/blog/1"}>
-          <button className="bg-primary text-white text-[16px] hover:cursor-pointer px-6 py-2 rounded hover:bg-purple-600 transition">
+          <button className="btn-sweep bg-primary text-white text-[16px] hover:cursor-pointer px-6 py-2 rounded">
           Read More
         </button>
          </Link>

@@ -11,10 +11,10 @@ interface RealStoriesCardProps {
 
 const RealStoriesCard: React.FC<RealStoriesCardProps> = ({ image, text, name }) => {
   return (
-    <div className="relative rounded-xl shadow-md md:h-[500px] flex flex-col items-center min-w-[90%] sm:min-w-[60%] md:min-w-[50%] lg:w-[28%] xl:min-w-[28%]">
+    <div className="card-hover relative rounded-xl shadow-md md:h-[500px] flex flex-col items-center min-w-[90%] sm:min-w-[60%] md:min-w-[50%] lg:w-[28%] xl:min-w-[28%]">
 
       <div className="w-full h-full overflow-hidden rounded-md">
-        <Image src={image} alt={name} className="w-full h-full object-cover" />
+        <Image src={image} alt={name} className="img-zoom w-full h-full object-cover" />
       </div>
 
       <div className="absolute bottom-0">

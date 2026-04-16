@@ -29,10 +29,10 @@ export default function Hero() {
 
         <div className="flex items-center  text-black ">
           <button
-            className="flex items-center text-gray-600 hover:text-gray-800"
+            className="flex items-center text-gray-600 hover:text-gray-800 transition-colors duration-300"
             aria-label="Play introduction video"
           >
-            <span className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2 text-sm">
+            <span className="play-btn w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2 text-sm">
               ▶
             </span>
           </button>

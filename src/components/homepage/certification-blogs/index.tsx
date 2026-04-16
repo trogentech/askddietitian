@@ -65,40 +65,37 @@ export default function CertificationsAndBlogs() {
           Our Nutrition Solutions Are Certified and Accredited
         </h2>
         <div className="flex flex-wrap gap-x-8 md:gap-x-4 gap-y-2 text-black font-medium text-sm md:text-[14px]">
-          <div  className="flex flex-col md:w-[250px] md:flex-row md:justify-center  md:mr-4">
-              <span className="text-start w-full md:text-md      font-semibold md:border-none leading-tight md:pl-0 ">
+          <div className="cert-item flex flex-col md:w-[250px] md:flex-row md:justify-center md:mr-4 cursor-default">
+              <span className="text-start w-full md:text-md font-semibold md:border-none leading-tight md:pl-0">
                Dietetic Association of <br className='hidden md:block'/> Nigeria (DAN)
                </span>
               <span
-                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8 "
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8"
               ></span>
             </div>
-      
-         
-            <div  className="flex flex-col md:w-[250px] md:flex-row md:justify-center md:mr-4">
-              <span className="text-start w-full  md:text-md      font-semibold md:border-none leading-tight md:pl-0 ">
+
+            <div className="cert-item flex flex-col md:w-[250px] md:flex-row md:justify-center md:mr-4 cursor-default">
+              <span className="text-start w-full md:text-md font-semibold md:border-none leading-tight md:pl-0">
               British Dietetic <br className='hidden md:block'/> Association (BDA)
                </span>
               <span
-                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8 "
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8"
               ></span>
             </div>
-      
-         
-            <div  className="flex flex-col md:w-[250px] md:flex-row md:justify-center md:mr-4">
-              <span className="text-start w-full  md:text-md    font-semibold md:border-none leading-tight md:pl-0 ">
+
+            <div className="cert-item flex flex-col md:w-[250px] md:flex-row md:justify-center md:mr-4 cursor-default">
+              <span className="text-start w-full md:text-md font-semibold md:border-none leading-tight md:pl-0">
              The Health and Care Professions Council (HCPC)
                </span>
               <span
-                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8 "
+                className="border-b-2 md:border-r-4 md:border-b-0 border-blue-high w-8 md:w-10 h-2 md:h-8"
               ></span>
             </div>
-      
-        <div  className="flex flex-col md:w-[250px]  md:text-md  md:flex-row md:justify-center">
-              <span className="text-start w-full   font-semibold md:border-none leading-tight md:pl-0 ">
+
+        <div className="cert-item flex flex-col md:w-[250px] md:text-md md:flex-row md:justify-center cursor-default">
+              <span className="text-start w-full font-semibold md:border-none leading-tight md:pl-0">
             FIDES (WHO)
                </span>
-             
             </div>
             </div>
       </div>
@@ -141,7 +138,7 @@ export default function CertificationsAndBlogs() {
             </button>
           </div>
          <Link href="/blog/1">
-  <button className="border border-gray-400 px-6 py-2 rounded-md text-sm hover:bg-gray-100 transition">
+  <button className="border border-gray-400 px-6 py-2 rounded-md text-sm transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1 hover:shadow-lg">
     Read More
   </button>
 </Link>

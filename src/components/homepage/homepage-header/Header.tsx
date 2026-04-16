@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import logo from '../../../assets/images/Logo.png';
 import instagramLogo from '../../../assets/images/instagram.png';
@@ -21,6 +22,7 @@ const serviceSubLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="relative z-50 w-full">
@@ -44,12 +46,12 @@ const Header = () => {
         </nav>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex mx-auto    text-lg md">
-          <div className="flex items-center   gap-10  justify-between">
-            <Link href="/" className="text-black text-[14px] font-semibold">Home</Link>
-            <Link href="/about" className="text-black text-[14px] font-semibold">About Us</Link>
+        <nav className="hidden md:flex mx-auto text-lg">
+          <div className="flex items-center gap-10 justify-between">
+            <Link href="/" className={`nav-link text-[14px] font-semibold ${pathname === '/' ? 'active text-primary' : 'text-black'}`}>Home</Link>
+            <Link href="/about" className={`nav-link text-[14px] font-semibold ${pathname === '/about' ? 'active text-primary' : 'text-black'}`}>About Us</Link>
             <div className="group relative">
-              <Link href="/services" className="text-black text-[14px] font-semibold inline-flex items-center gap-1">
+              <Link href="/services" className={`nav-link text-[14px] font-semibold inline-flex items-center gap-1 ${pathname.startsWith('/services') ? 'active text-primary' : 'text-black'}`}>
                 Services
                 <IoChevronDown className="text-[12px] transition-transform duration-200 group-hover:rotate-180" />
               </Link>
@@ -59,7 +61,7 @@ const Header = () => {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block px-4 py-2.5 text-[13px] font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
+                      className={`block px-4 py-2.5 text-[13px] font-medium transition-colors ${pathname === item.href ? 'bg-purple-50 text-purple-700' : 'text-gray-700 hover:bg-purple-50 hover:text-purple-700'}`}
                     >
                       {item.label}
                     </Link>
@@ -67,7 +69,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <Link href="/blog" className="text-black text-[14px] font-semibold">Blog</Link>
+            <Link href="/blog" className={`nav-link text-[14px] font-semibold ${pathname.startsWith('/blog') ? 'active text-primary' : 'text-black'}`}>Blog</Link>
           </div>
         </nav>
           <div className="hidden md:flex md:items-center md:gap-3">
@@ -98,9 +100,15 @@ const Header = () => {
                 </button>
               </div>
 
-              <button className="w-3/4 bg-purple-600 text-white py-2 rounded-md font-medium mb-3">
+              <a
+                href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20nutrition%20consultation."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="w-3/4 block text-center bg-purple-600 text-white py-2 rounded-md font-medium mb-3"
+              >
                 Book a Free Consultation
-              </button>
+              </a>
               <a
                 href={WHATSAPP_COMMUNITY_URL}
                 target="_blank"
@@ -113,11 +121,11 @@ const Header = () => {
 
               {/* Navigation */}
               <nav className="flex flex-col space-y-4 text-base text-gray-900">
-                <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-                <Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link>
+                <Link href="/" onClick={() => setIsOpen(false)} className={`mobile-nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+                <Link href="/about" onClick={() => setIsOpen(false)} className={`mobile-nav-link ${pathname === '/about' ? 'active' : ''}`}>About Us</Link>
                 <div>
                   <div className="flex items-center justify-between">
-                    <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>
+                    <Link href="/services" onClick={() => setIsOpen(false)} className={`mobile-nav-link ${pathname.startsWith('/services') ? 'active' : ''}`}>Services</Link>
                     <button
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
                       className="p-1"
@@ -135,7 +143,7 @@ const Header = () => {
                           key={item.href}
                           href={item.href}
                           onClick={() => { setIsOpen(false); setIsServicesOpen(false); }}
-                          className="text-[14px] text-gray-600 hover:text-purple-700 transition-colors"
+                          className={`text-[14px] transition-colors ${pathname === item.href ? 'text-purple-700 font-semibold' : 'text-gray-600 hover:text-purple-700'}`}
                         >
                           {item.label}
                         </Link>
@@ -143,7 +151,7 @@ const Header = () => {
                     </div>
                   )}
                 </div>
-                <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
+                <Link href="/blog" onClick={() => setIsOpen(false)} className={`mobile-nav-link ${pathname.startsWith('/blog') ? 'active' : ''}`}>Blog</Link>
               </nav>
             </div>
 

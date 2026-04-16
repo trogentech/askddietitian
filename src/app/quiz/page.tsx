@@ -92,9 +92,9 @@ const QuizPage = () => {
   };
 
   const handleBookConsultation = () => {
-    // Here you would implement booking logic
-    alert(
-      'Booking functionality would be implemented here. Redirecting to consultation booking...'
+    window.open(
+      'https://wa.me/YOUR_PHONE_NUMBER?text=Hi%2C%20I%E2%80%99d%20like%20to%20book%20a%20nutrition%20consultation.',
+      '_blank'
     );
   };
 
