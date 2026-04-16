@@ -1,14 +1,14 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #8B2CC9;
-  --purple:#F3EAFA;
-  --blue:#f7fbfd;
-   --blue-high:#2C99C9;
-  --light-purple:#F3EAFA;
-   --light-gray:#EAF5F4;
+  --primary: #8b2cc9;
+  --purple: #f3eafa;
+  --blue: #f7fbfd;
+  --blue-high: #2c99c9;
+  --light-purple: #f3eafa;
+  --light-gray: #eaf5f4;
   --font-poppins: 'Poppins', sans-serif;
 }
 
@@ -17,12 +17,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-primary:var(--primary);
-   --color-blue:var(--blue);
-   --color-blue-high:var(--blue-high);
-   --color-light-purple:var(--light-purple);
-   --color-purple:var(--purple);
-   --color-light-gray:var(--light-gray);
+  --color-primary: var(--primary);
+  --color-blue: var(--blue);
+  --color-blue-high: var(--blue-high);
+  --color-light-purple: var(--light-purple);
+  --color-purple: var(--purple);
+  --color-light-gray: var(--light-gray);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,10 +32,8 @@
   }
 }
 @layer base {
- 
-
   p {
-    @apply text-base ;
+    @apply text-base;
   }
 }
 .scrollbar-hide::-webkit-scrollbar {
@@ -43,8 +41,8 @@
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;    
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {

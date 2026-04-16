@@ -135,6 +135,7 @@ const QuizPage = () => {
         <div className='max-w-4xl mx-auto px-6'>
           <QuizResults
             result={quizResult}
+            answers={answers}
             onRetakeQuiz={handleRetakeQuiz}
             onBookConsultation={handleBookConsultation}
           />

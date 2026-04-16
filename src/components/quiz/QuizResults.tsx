@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { QuizResult } from '@/lib/quiz';
-import { sendDetailedRecommendations } from '@/lib/sendEmail';
+import { QuizResult, QuizAnswers } from '@/lib/quiz';
 
 interface QuizResultsProps {
   result: QuizResult;
+  answers: QuizAnswers;
   onRetakeQuiz: () => void;
   onBookConsultation: () => void;
 }
@@ -74,6 +74,7 @@ const getBloodPressureName = (bloodPressure?: string) => {
 
 const QuizResults: React.FC<QuizResultsProps> = ({
   result,
+  answers,
   onRetakeQuiz,
   onBookConsultation,
 }) => {
@@ -116,8 +117,31 @@ const QuizResults: React.FC<QuizResultsProps> = ({
     setEmailError('');
 
     try {
-      await sendDetailedRecommendations(email, result);
-      setEmailSent(true);
+      // Call the new API endpoint that reads from Google Sheets
+      const response = await fetch('/api/send-pdf', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          quizAnswers: answers,
+          result: {
+            title: result.title,
+            summary: result.summary,
+            priority: result.priority,
+          },
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setEmailSent(true);
+        console.log('PDF sent successfully:', data);
+      } else {
+        setEmailError(data.error || 'Failed to send email. Please try again.');
+      }
     } catch (error) {
       console.error('Failed to send email:', error);
       setEmailError('Failed to send email. Please try again.');

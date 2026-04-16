@@ -1,0 +1,26 @@
+pdf_identifier,condition,sub_condition,pdf_name,pdf_url,priority,description
+diabetes-type1,diabetes,type1,Diabetes Type 1 Guide,https://example.com/pdfs/diabetes-type1.pdf,high,Complete guide for Type 1 diabetes management including insulin and carb counting
+diabetes-type2,diabetes,type2,Diabetes Type 2 Guide,https://example.com/pdfs/diabetes-type2.pdf,medium,Managing Type 2 diabetes through diet and lifestyle
+diabetes-gestational,diabetes,gestational,Gestational Diabetes Guide,https://example.com/pdfs/diabetes-gestational.pdf,high,Safe pregnancy nutrition for blood sugar control
+diabetes-prediabetes,diabetes,prediabetes,Prediabetes Prevention Guide,https://example.com/pdfs/diabetes-prediabetes.pdf,medium,Prevent Type 2 diabetes with lifestyle changes
+diabetes-family-history,diabetes,family-history,Diabetes Prevention Guide,https://example.com/pdfs/diabetes-family-history.pdf,low,Preventive measures with family history of diabetes
+diabetes-not-sure,diabetes,not-sure,Blood Sugar Health Guide,https://example.com/pdfs/diabetes-not-sure.pdf,low,Understanding and managing blood sugar levels
+bp-pre-hypertension,high-blood-pressure,pre-hypertension,Pre-Hypertension Guide,https://example.com/pdfs/bp-pre-hypertension.pdf,low,Lifestyle changes for borderline high blood pressure
+bp-stage-1,high-blood-pressure,stage-1,Stage 1 Hypertension Guide,https://example.com/pdfs/bp-stage-1.pdf,medium,Managing Stage 1 hypertension
+bp-stage-2,high-blood-pressure,stage-2,Stage 2 Hypertension Guide,https://example.com/pdfs/bp-stage-2.pdf,high,Urgent management of severe hypertension
+bp-not-sure,high-blood-pressure,not-sure,Blood Pressure Health Guide,https://example.com/pdfs/bp-not-sure.pdf,medium,Understanding and managing blood pressure
+pcos-weight-loss,pcos,weight-loss,PCOS Weight Management,https://example.com/pdfs/pcos-weight-loss.pdf,medium,Weight loss strategies with PCOS
+pcos-fertility,pcos,fertility,PCOS Fertility Guide,https://example.com/pdfs/pcos-fertility.pdf,high,Improving fertility with PCOS
+pcos-prediabetes-insulin,pcos,prediabetes/insulin,PCOS Insulin Resistance Guide,https://example.com/pdfs/pcos-insulin.pdf,medium,Managing insulin resistance with PCOS
+pcos-symptom-management,pcos,symptom-management,PCOS Symptoms Guide,https://example.com/pdfs/pcos-symptoms.pdf,medium,Managing PCOS symptoms naturally
+pcos-not-sure,pcos,not-sure,PCOS Complete Guide,https://example.com/pdfs/pcos-general.pdf,medium,General PCOS information and management
+weight-loss-little,weight-loss,little,Gentle Weight Loss Guide,https://example.com/pdfs/weight-loss-little.pdf,low,Gradual weight loss for near goal weight
+weight-loss-moderate,weight-loss,moderate,Effective Weight Loss Guide,https://example.com/pdfs/weight-loss-moderate.pdf,medium,Losing 10-20 lbs successfully
+weight-loss-significant,weight-loss,significant,Significant Weight Loss Guide,https://example.com/pdfs/weight-loss-significant.pdf,high,Roadmap for major weight loss journey
+weight-loss-not-sure,weight-loss,not-sure,Healthy Weight Journey,https://example.com/pdfs/weight-loss-unsure.pdf,low,Getting started with weight management
+cholesterol-yes,high-cholesterol,yes,High Cholesterol Guide,https://example.com/pdfs/cholesterol-high.pdf,medium,Managing high cholesterol through diet
+cholesterol-no,high-cholesterol,no,Cholesterol Health Guide,https://example.com/pdfs/cholesterol-healthy.pdf,low,Maintaining healthy cholesterol levels
+general-weight-loss,none-of-the-above,weight-loss,Weight Loss Starter Guide,https://example.com/pdfs/general-weight-loss.pdf,low,Beginner's weight loss guide
+general-healthy-eating,none-of-the-above,general-healthy-eating,Healthy Eating Guide,https://example.com/pdfs/general-healthy.pdf,low,Balanced nutrition basics
+general-weight-gain,prefer-not-to-answer,weight-gain,Healthy Weight Gain Guide,https://example.com/pdfs/general-weight-gain.pdf,low,Healthy ways to gain weight
+general-weight-maintenance,prefer-not-to-answer,weight-maintenance,Weight Maintenance Guide,https://example.com/pdfs/general-maintain.pdf,low,Maintaining your healthy weight

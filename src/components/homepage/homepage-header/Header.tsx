@@ -9,10 +9,18 @@ import twitterLogo from '../../../assets/images/twitter.png';
 import linkedinLogo from '../../../assets/images/linkedin.png';
 import BookButton from '@/components/button/bookbutton';
 import menuImage from '../../../assets/images/menu.png';
-import { IoClose } from 'react-icons/io5';
+import { IoClose, IoChevronDown, IoLogoWhatsapp } from 'react-icons/io5';
+
+const WHATSAPP_COMMUNITY_URL = 'https://chat.whatsapp.com/YOUR_CHANNEL_LINK';
+
+const serviceSubLinks = [
+  { href: '/services/corporate-wellness', label: 'Corporate Wellness' },
+  { href: '/services/nutritional-therapy', label: 'Nutritional Therapy' },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
     <header className="relative z-50 w-full">
@@ -40,11 +48,38 @@ const Header = () => {
           <div className="flex items-center   gap-10  justify-between">
             <Link href="/" className="text-black text-[14px] font-semibold">Home</Link>
             <Link href="/about" className="text-black text-[14px] font-semibold">About Us</Link>
-            <Link href="/services" className="text-black text-[14px] font-semibold">Services</Link>
+            <div className="group relative">
+              <Link href="/services" className="text-black text-[14px] font-semibold inline-flex items-center gap-1">
+                Services
+                <IoChevronDown className="text-[12px] transition-transform duration-200 group-hover:rotate-180" />
+              </Link>
+              <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200">
+                <div className="bg-white rounded-lg shadow-lg border border-gray-100 py-2 min-w-[220px]">
+                  {serviceSubLinks.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-[13px] font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <Link href="/blog" className="text-black text-[14px] font-semibold">Blog</Link>
           </div>
         </nav>
-          <div className="hidden md:block">
+          <div className="hidden md:flex md:items-center md:gap-3">
+            <a
+              href={WHATSAPP_COMMUNITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 border-2 border-green-500 text-green-600 text-[13px] font-semibold rounded-md hover:bg-green-50 transition-colors"
+            >
+              <IoLogoWhatsapp className="text-[16px]" />
+              Join Community
+            </a>
             <BookButton text=" Book a Free Consultation" />
           </div>
       </div>
@@ -63,15 +98,51 @@ const Header = () => {
                 </button>
               </div>
 
-              <button className="w-3/4 bg-purple-600 text-white py-2 rounded-md font-medium mb-6">
+              <button className="w-3/4 bg-purple-600 text-white py-2 rounded-md font-medium mb-3">
                 Book a Free Consultation
               </button>
+              <a
+                href={WHATSAPP_COMMUNITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-3/4 inline-flex items-center justify-center gap-2 border-2 border-green-500 text-green-600 py-2 rounded-md font-medium mb-6 hover:bg-green-50 transition-colors"
+              >
+                <IoLogoWhatsapp className="text-lg" />
+                Join Community
+              </a>
 
               {/* Navigation */}
               <nav className="flex flex-col space-y-4 text-base text-gray-900">
                 <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
                 <Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link>
-                <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>
+                    <button
+                      onClick={() => setIsServicesOpen(!isServicesOpen)}
+                      className="p-1"
+                      aria-label="Toggle services submenu"
+                    >
+                      <IoChevronDown
+                        className={`text-[16px] text-gray-600 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+                  </div>
+                  {isServicesOpen && (
+                    <div className="flex flex-col space-y-3 pl-4 pt-3">
+                      {serviceSubLinks.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => { setIsOpen(false); setIsServicesOpen(false); }}
+                          className="text-[14px] text-gray-600 hover:text-purple-700 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
               </nav>
             </div>

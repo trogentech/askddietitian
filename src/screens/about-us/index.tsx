@@ -3,6 +3,7 @@ import Navigation from '@/components/homepage/navigation/page'
 import React from 'react'
 import About from './about-us'
 import WhoWeAre from '@/components/about-us/whoweare'
+import MeetTheFounder from '@/components/about-us/meet-the-founder'
 import OurApproach from '@/components/about-us/our-approach'
 import NutritionPage from '@/components/homepage/nutrition-ui/nutrition-ui'
 import Footer from '@/components/homepage/footer/footer'
@@ -20,6 +21,9 @@ const AboutUs = () => {
       </section>
        <section className='md:px-12 px-6 pt-4 pb-10'>
         <WhoWeAre/>
+      </section>
+      <section className='md:px-12 px-6 py-10 md:py-16'>
+        <MeetTheFounder/>
       </section>
          <section className='md:px-12 px-6 pt-4 md:pb-20 pb-20 bg-black '>
         <OurApproach/>
